@@ -15,6 +15,6 @@ public class MoveBlockEnemyZ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        transform.position += transform.TransformDirection(Vector3.back) * MoveSpeed * Time.deltaTime;
     }
 }
