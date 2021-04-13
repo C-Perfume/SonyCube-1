@@ -20,9 +20,17 @@ public class Enemy2Man : MonoBehaviour
         creatTime = Random.Range(5, 20);
         if (creatTime < realTime) 
         {
-           GameObject enemy2 = Instantiate(enemy2F);
-            enemy2.transform.position = transform.position;
+            List<GameObject> list = new List<GameObject>();
+            if (list.Count < 3)
+                //GameObject enemy2 = Instantiate(enemy2F);
+                list.Add(enemy2F);
+            enemy2F.transform.position = transform.position;
             realTime = 0;
+            foreach (var obj in list)
+            {
+                GameObject.Destroy(obj);
+            }
+            list.Clear();
         }
     }
 }
