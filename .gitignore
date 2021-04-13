@@ -7,7 +7,7 @@ Temp/
 .vs/
 *.vs
 .vsconfig
-*.cspoj
+*.csproj
 *.sln
-.sin
-Assembly-CSharp.csproj
+
+
