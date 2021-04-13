@@ -5,6 +5,7 @@ UserSettings/
 obj/
 Temp/
 .vs/
+*.vs
 .vsconfig
 *.cspoj
 *.sln
