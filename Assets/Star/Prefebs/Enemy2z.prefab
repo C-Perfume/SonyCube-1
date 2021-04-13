@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 660449814724864542}
   - component: {fileID: 6360853771007227373}
   m_Layer: 0
-  m_Name: Enemy2
+  m_Name: Enemy2z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7615630939825442079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 7615630941372695242}
   m_Father: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f09b4b73ad0184d8fbab0f69e46524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyT: 4.8
+  destroyT: 3
 --- !u!1 &7615630941372695243
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7615630941372695243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7615630939825442075}
@@ -170,5 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b22f7774a3f9f749b421a56077cf1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creatTime: 3
+  creatTime: 2
   laserF: {fileID: 7159237962624302758, guid: 3fc44d190d570714c83dd58382e1b6b3, type: 3}

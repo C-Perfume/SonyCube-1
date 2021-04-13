@@ -15,7 +15,7 @@ public class Laser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.back * speed * Time.deltaTime;
+       transform.Translate(Vector3.back * speed * Time.deltaTime);
     }
     private void OnTriggerEnter(Collider other)
     {

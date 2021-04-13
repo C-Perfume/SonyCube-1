@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy2Man : MonoBehaviour
 {
     float realTime;
-    public float creatTime = 2;
+    public int creatTime; 
     public GameObject enemy2F;
     // Start is called before the first frame update
     void Start()
@@ -17,11 +17,10 @@ public class Enemy2Man : MonoBehaviour
     void Update()
     {
         realTime += Time.deltaTime;
-
+        creatTime = Random.Range(5, 20);
         if (creatTime < realTime) 
         {
            GameObject enemy2 = Instantiate(enemy2F);
-            //적큐브 위치를 위로 10정도 올려진 곳에서 만들고 싶다. 어떻게??
             enemy2.transform.position = transform.position;
             realTime = 0;
         }
