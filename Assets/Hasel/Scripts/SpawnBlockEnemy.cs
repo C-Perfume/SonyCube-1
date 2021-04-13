@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnBlockEnemy : MonoBehaviour
 {
     public GameObject EnemyFactory;
-    public float SpawnSpeed = 13;
+    public float SpawnSpeed = 13; //초기 생성속도
     public float MoveSpeed = -4;
     float currentTime;
 
