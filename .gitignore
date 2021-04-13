@@ -4,7 +4,8 @@ Logs/
 UserSettings/
 obj/
 Temp/
+.vs/
 .vsconfig
-*.vs
-*.csproj
+*.cspoj
 *.sln
+.sin
