@@ -52,11 +52,8 @@ public class PlayerM : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, -0, 0);
                 mCunt++;
                 if (transform.position.z >= 4) transform.position = new Vector3(transform.position.x, transform.position.y, 4);
-
-
-
             }
-
+           
             if (mCunt >= 1)
             {
                 m = false;
