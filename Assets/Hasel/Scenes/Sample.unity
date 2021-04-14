@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &48905667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053853544005243, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -160,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &70263297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852548486411, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -179,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &70575588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852707623196, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -198,7 +195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &260769636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852618778740, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -217,7 +213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &284135809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053853650192958, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -236,7 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &313700791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852413982062, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -255,7 +249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &390071387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053851557554532, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -274,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &529892337 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852543644597, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -293,7 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &562266275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852931650494, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -312,7 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &745305368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852615705434, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -443,7 +432,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &847289728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852630277518, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -462,7 +450,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &851186788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852399674563, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -481,7 +468,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &992548511 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852680545216, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -500,7 +486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &1306216970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053853344207380, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -519,7 +504,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &1783475024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053851664965462, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -538,7 +522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
-  SpawnSpeed: 12
 --- !u!1 &1977919886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6538053852417983760, guid: 755b2be3a886a6941a1930fa39dfac01, type: 3}
@@ -557,7 +540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
-  SpawnSpeed: 12
 --- !u!1001 &734994110860931606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,24 +718,8 @@ PrefabInstance:
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 6209676979744673713, guid: 990fddb04b25d8a46bd6ef92f8c4a45f, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209676979744673713, guid: 990fddb04b25d8a46bd6ef92f8c4a45f, type: 3}
       propertyPath: orthographic
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209676979744673713, guid: 990fddb04b25d8a46bd6ef92f8c4a45f, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.7075472
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209676979744673713, guid: 990fddb04b25d8a46bd6ef92f8c4a45f, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.7075472
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209676979744673713, guid: 990fddb04b25d8a46bd6ef92f8c4a45f, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.7075472
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 990fddb04b25d8a46bd6ef92f8c4a45f, type: 3}
