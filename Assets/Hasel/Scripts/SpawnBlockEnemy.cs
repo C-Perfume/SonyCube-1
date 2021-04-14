@@ -6,7 +6,7 @@ public class SpawnBlockEnemy : MonoBehaviour
 {
     public GameObject EnemyFactory;
     public float SpawnSpeed = 13; //초기 생성속도
-    public float MoveSpeed = -4;
+    public float MoveSpeed = 4;
     float currentTime;
 
     // Start is called before the first frame update
@@ -36,6 +36,6 @@ public class SpawnBlockEnemy : MonoBehaviour
     }
     void Move()
     {
-        transform.position += transform.up * MoveSpeed * Time.deltaTime;
+        transform.position -= transform.up * MoveSpeed * Time.deltaTime;
     }
 }

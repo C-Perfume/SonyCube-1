@@ -5,8 +5,10 @@ using UnityEngine;
 public class Enemy2Fire : MonoBehaviour
 {
     float realTime;
-    public float creatTime = 1;
+    public float creatTime = 0.5f;
     public GameObject laserF;
+    int laserCnt=0;
+    bool laserA = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +19,20 @@ public class Enemy2Fire : MonoBehaviour
     void Update()
     {
         //한번만 나가게 하고 싶은데.. 스타트에서는 안된다
+        
         realTime += Time.deltaTime;
-        if (creatTime < realTime)
+
+        if (laserA)
         {
-            GameObject laser = Instantiate(laserF);
-            laser.transform.position = transform.position;
-            realTime = 0;
+            if (creatTime < realTime)
+            {
+                GameObject laser = Instantiate(laserF);
+                laser.transform.position = transform.position;
+                realTime = 0;
+                laserCnt++;
+                if (laserCnt >= 1)
+                { laserA = false; }
+            }
         }
     }
 }

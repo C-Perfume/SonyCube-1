@@ -7,7 +7,7 @@ public class MoveBlockEnemyZ : MonoBehaviour
     public float MoveSpeed = 4;
 
     //일정시간
-    float thisTime = 2;
+    //float thisTime = 2;
     //흐르는시간
     float currTime = 0;
 
