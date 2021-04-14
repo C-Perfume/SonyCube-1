@@ -11,13 +11,6 @@ public class T_Move_X : MonoBehaviour
     public float stayTime = 0.2f;
     int moveCnt;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (movable)
@@ -48,6 +41,6 @@ public class T_Move_X : MonoBehaviour
             }
         }
 
-        //Destroy(gameObject, 15);
+        Destroy(gameObject, 18);
     }
 }

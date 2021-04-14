@@ -4,37 +4,22 @@ using UnityEngine;
 
 public class MoveBlockEnemyZ : MonoBehaviour
 {
-    public float MoveSpeed = 4;
 
-    //일정시간
-    float thisTime = 2;
-    //흐르는시간
     float currTime = 0;
-
-    //이동가능
     bool movable = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    public float time;
+    public float time = 0.8f;
     public GameObject cube;
-    public float stayTime = 0.5f;
+    public float stayTime = 0.2f;
     int moveCnt;
 
-    // Update is called once per frame
     void Update()
     {
-        //transform.position += transform.TransformDirection(Vector3.back) * MoveSpeed * Time.deltaTime;
         if (movable)
         {
             currTime += Time.deltaTime;
-            transform.position += transform.forward * Time.deltaTime * (1 / time);
-            cube.transform.Rotate(0, 0, -90 * Time.deltaTime * (1 / time));
-            if (moveCnt >= 9)
+            transform.position -= transform.forward * 1 * Time.deltaTime * (1 / time);
+            cube.transform.Rotate(-90 * Time.deltaTime * (1 / time), 0, 0);
+            if (moveCnt >= 10)
             {
                 transform.position -= transform.up * Time.deltaTime;
             }
@@ -56,5 +41,7 @@ public class MoveBlockEnemyZ : MonoBehaviour
                 currTime = 0;
             }
         }
+
+        Destroy(gameObject, 18);
     }
 }
