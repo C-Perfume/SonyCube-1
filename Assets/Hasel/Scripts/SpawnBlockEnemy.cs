@@ -5,13 +5,13 @@ using UnityEngine;
 public class SpawnBlockEnemy : MonoBehaviour
 {
     public GameObject EnemyFactory;
-    public float SpawnSpeed = 13; //초기 생성속도
-    float currentTime;
+    float SpawnSpeed; //생성속도
+    float currentTime; //흐르는시간
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnSpeed = Random.Range(6f, 20f);
+        SpawnSpeed = Random.Range(6f, 20f); //초기 랜덤지정
     }
 
     // Update is called once per frame
