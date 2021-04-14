@@ -15,9 +15,9 @@ public class MoveBlockEnemyX : MonoBehaviour
 
     }
 
-    public float time = 0.8f;
+    public float time = 1f;
     public GameObject cube;
-    public float stayTime = 0.2f;
+    public float stayTime = 1f;
     int moveCnt;
     // Update is called once per frame
     void Update()
@@ -29,7 +29,7 @@ public class MoveBlockEnemyX : MonoBehaviour
             cube.transform.Rotate(0, 0, -90 * Time.deltaTime * (1 / time));
             if (moveCnt >= 10)
             {
-                transform.position -= transform.up * Time.deltaTime;
+                //transform.position -= transform.up * Time.deltaTime;
             }
             else if (currTime > time)
             {

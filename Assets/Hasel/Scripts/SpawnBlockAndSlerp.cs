@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnBlockEnemy : MonoBehaviour
+public class SpawnBlockAndSlerp : MonoBehaviour
 {
     public GameObject EnemyFactory;
+    public GameObject targetPosition;
     private float SpawnSpeed; //생성 속도
     float currentTime; //흐르는 시간
 
@@ -23,6 +24,8 @@ public class SpawnBlockEnemy : MonoBehaviour
             Spawn();
             currentTime = 0;
             //시간 초기화
+            Slerping();
+
             SpawnSpeed = Random.Range(6f, 20f);
             //랜덤한 시간에 생성
         }
@@ -31,5 +34,9 @@ public class SpawnBlockEnemy : MonoBehaviour
     {
         GameObject enemy = Instantiate(EnemyFactory); //지정된 팩토리에서 생성
         enemy.transform.position = transform.position;
+    }
+    void Slerping()
+    {
+        transform.position = Vector3.Lerp(gameObject.transform.position, targetPosition.transform.position, 1f);
     }
 }
