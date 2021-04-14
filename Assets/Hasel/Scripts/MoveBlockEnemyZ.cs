@@ -7,9 +7,9 @@ public class MoveBlockEnemyZ : MonoBehaviour
 
     float currTime = 0;
     bool movable = true;
-    public float time = 0.8f;
+    public float time = 1f;
     public GameObject cube;
-    public float stayTime = 0.2f;
+    public float stayTime = 1f;
     int moveCnt;
 
     void Update()
