@@ -12,7 +12,7 @@ public class SpawnBlockEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SpawnSpeed = Random.Range(6f, 20f);
     }
 
     // Update is called once per frame
