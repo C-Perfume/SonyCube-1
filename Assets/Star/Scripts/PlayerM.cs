@@ -22,11 +22,11 @@ public class PlayerM : MonoBehaviour
 
         if (m)
         {
+            
             if (Input.GetKeyDown(KeyCode.S))
             {
                 transform.position += Vector3.right;
                 transform.eulerAngles = new Vector3(0, 90, 0);
-                mCunt++;
                 if (transform.position.x >= 4) transform.position = new Vector3(4, transform.position.y, transform.position.z);
             }
 
@@ -34,7 +34,6 @@ public class PlayerM : MonoBehaviour
             {
                 transform.position += Vector3.left;
                 transform.eulerAngles = new Vector3(0, -90, 0);
-                mCunt++;
                 if (transform.position.x <= -4) transform.position = new Vector3(-4, transform.position.y, transform.position.z);
             }
 
@@ -42,7 +41,6 @@ public class PlayerM : MonoBehaviour
             {
                 transform.position += Vector3.back;
                 transform.eulerAngles = new Vector3(0, -180, 0);
-                mCunt++;
                 if (transform.position.z <= -4) transform.position = new Vector3(transform.position.x, transform.position.y, -4);
             }
 
@@ -50,10 +48,11 @@ public class PlayerM : MonoBehaviour
             {
                 transform.position += Vector3.forward;
                 transform.eulerAngles = new Vector3(0, -0, 0);
-                mCunt++;
                 if (transform.position.z >= 4) transform.position = new Vector3(transform.position.x, transform.position.y, 4);
             }
-           
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            { mCunt++; }
+
             if (mCunt >= 1)
             {
                 m = false;
@@ -69,10 +68,6 @@ public class PlayerM : MonoBehaviour
                 currTime = 0;
             }
         }
-
-        
-
-
 
     }
 }

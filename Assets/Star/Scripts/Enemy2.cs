@@ -35,16 +35,6 @@ public class Enemy2 : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name.Contains("Spawn"))
-        {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            rb.constraints = RigidbodyConstraints.None;
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
+    
+
 }

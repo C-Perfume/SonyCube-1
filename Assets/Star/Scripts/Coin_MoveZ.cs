@@ -34,9 +34,9 @@ public class Coin_MoveZ : MonoBehaviour
         }
         if (spin)
         {
-            cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
-        }
+            if (cube != null) cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
 
+        }
 
         if (movable)
         {
@@ -66,10 +66,10 @@ public class Coin_MoveZ : MonoBehaviour
         }
 
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    GameObject pl = GameObject.Find("Player");
-    //    if ( pl == collision.gameObject.)
-    //    { Destroy(gameObject); }
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject pl = GameObject.Find("Player");
+        if (pl == collision.gameObject)
+        { Destroy(gameObject); }
+    }
 }

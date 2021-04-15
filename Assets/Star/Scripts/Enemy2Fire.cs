@@ -7,12 +7,16 @@ public class Enemy2Fire : MonoBehaviour
     float realTime;
     public float creatTime = 0.5f;
     public GameObject laserF;
-    int laserCnt=0;
+        int laserCnt=0;
     bool laserA = true;
+    
+    public GameObject dangerZF;
+    public float dZonePosition = -0.3f; 
     // Start is called before the first frame update
     void Start()
     {
-
+                GameObject dZ = Instantiate(dangerZF); 
+                dZ.transform.position = new Vector3(transform.position.x, dZonePosition, transform.position.z);
     }
 
     // Update is called once per frame

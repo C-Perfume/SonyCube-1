@@ -15,6 +15,8 @@ public class Coin_MoveX : MonoBehaviour
     bool rightM = true;
     bool spin = false;
 
+    void Start()
+    { Destroy(gameObject, 13); }
     void Update()
     {
         if (rightM)
@@ -32,38 +34,54 @@ public class Coin_MoveX : MonoBehaviour
         }
         if (spin) 
         {
-            cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
+            if (cube != null) cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
+
         }
-        
 
-                if (movable)
-                {
+        if (movable)
+        {
 
-                  currTime += Time.deltaTime;
-                    transform.position += transform.right * Time.deltaTime * (1 / time);
-                    if (moveCnt >= 9)
-                    {
-                        transform.position -= transform.up * Time.deltaTime;
-                    }
-                    else if (currTime > time)
-                    {
-                        movable = false;
-                        currTime = 0;
-                        moveCnt++;
-                    }
-                }
-                else
-                {
-                    currTime += Time.deltaTime;
+            currTime += Time.deltaTime;
+            transform.position += transform.right * Time.deltaTime * (1 / time);
+            if (moveCnt >= 9)
+            {
+                transform.position -= transform.up * Time.deltaTime;
+            }
+            else if (currTime > time)
+            {
+                movable = false;
+                currTime = 0;
+                moveCnt++;
+            }
+        }
+        else
+        {
+            currTime += Time.deltaTime;
 
-                    if (currTime > stayTime)
-                    {
-                        movable = true;
-                        currTime = 0;
-                    }
-                }
-            
-        
-        Destroy(gameObject, 13);
+            if (currTime > stayTime)
+            {
+                movable = true;
+                currTime = 0;
+            }
+        }
+
+
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject pl = GameObject.Find("Player");
+        if (pl == collision.gameObject)
+        { Destroy(gameObject); }
+    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    //스폰이 포함된 충돌체가 있다면
+    //    if (collision.gameObject.name.Contains("Spawn"))
+    //    {// Rigidbody 컴포넌트를 가져와서 
+    //        Rigidbody rb = GetComponent<Rigidbody>();
+    //        //회전을 잠근다.
+    //        rb.constraints = RigidbodyConstraints.None;
+    //    }
+    //}
 }
