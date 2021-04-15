@@ -23,7 +23,7 @@ public class SpawnBlockEnemy : MonoBehaviour
             Spawn();
             currentTime = 0;
             //시간 초기화
-            SpawnSpeed = Random.Range(6f, 24f);
+            SpawnSpeed = Random.Range(10f, 24f);
             //랜덤한 시간에 생성
 
             EnemyManagement.Enm1Cnt++;
