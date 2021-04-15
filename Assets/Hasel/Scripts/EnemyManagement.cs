@@ -9,7 +9,7 @@ public class EnemyManagement : MonoBehaviour
     //소환된 적의 수량
     public static int Enm1Cnt;
     //지정 할 최대 소환 수량
-    public static int Enm1max=2;
+    public static int Enm1max=3;
     public static bool Enm1SpawnEnable;
 
     private void Awake()
