@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b645b26553a5b42b1ae5bb1f1c8703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.8
+  time: 0.5
   cube: {fileID: 5965351733505050272}
-  stayTime: 0.2
+  stayTime: 1
 --- !u!1 &5965351733505050272
 GameObject:
   m_ObjectHideFlags: 0

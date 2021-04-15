@@ -17,18 +17,26 @@ public class MoveBlockEnemyZ : MonoBehaviour
         if (movable)
         {
             currTime += Time.deltaTime;
-            transform.position -= transform.forward * 1 * Time.deltaTime * (1 / time);
+            transform.position -= transform.forward * Time.deltaTime * (1 / time);
             cube.transform.Rotate(-90 * Time.deltaTime * (1 / time), 0, 0);
+
             if (moveCnt >= 10)
             {
                 transform.position -= transform.up * Time.deltaTime;
             }
+
             else if (currTime > time)
             {
+                float f = currTime - time;
+
                 movable = false;
                 currTime = 0;
                 moveCnt++;
-                print(moveCnt);
+                //print(moveCnt);
+
+                //print(f);
+                cube.transform.Rotate(90 * f * (1 / time), 0, 0);
+                transform.position += transform.forward * f * (1 / time);
             }
         }
         else
@@ -43,5 +51,6 @@ public class MoveBlockEnemyZ : MonoBehaviour
         }
 
         Destroy(gameObject, 18);
+        //스태틱 소환가능수+1
     }
 }

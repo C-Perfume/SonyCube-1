@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053851557554523}
+  - component: {fileID: 7235833015094747575}
   m_Layer: 9
   m_Name: Spawn X9
   m_TagString: Untagged
@@ -30,6 +31,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015094747575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053851557554532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053851664965462
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,6 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053851664965461}
+  - component: {fileID: 7235833015771442461}
   m_Layer: 9
   m_Name: Spawn X4
   m_TagString: Untagged
@@ -60,6 +75,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015771442461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053851664965462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053851986990514
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,6 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053851986990513}
+  - component: {fileID: 7235833015445182838}
   m_Layer: 9
   m_Name: Spawn X5
   m_TagString: Untagged
@@ -90,6 +119,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015445182838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053851986990514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053852399674563
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852399674562}
+  - component: {fileID: 7235833014289269707}
   m_Layer: 9
   m_Name: Spawn Z4
   m_TagString: Untagged
@@ -120,6 +163,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014289269707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852399674563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053852413982062
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852413982061}
+  - component: {fileID: 7235833014828836210}
   m_Layer: 9
   m_Name: Spawn X7
   m_TagString: Untagged
@@ -150,6 +207,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014828836210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852413982062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053852417600076
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6538053852417600067}
   m_Layer: 9
-  m_Name: Block Enemy Spawner
+  m_Name: Block_Enemy_Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852417983767}
+  - component: {fileID: 7235833014784390679}
   m_Layer: 9
   m_Name: Spawn Z6
   m_TagString: Untagged
@@ -228,6 +299,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014784390679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852417983760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053852543644597
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852543644596}
+  - component: {fileID: 7235833015311500165}
   m_Layer: 9
   m_Name: Spawn Z5
   m_TagString: Untagged
@@ -258,6 +343,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015311500165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852543644597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053852548486411
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852548486410}
+  - component: {fileID: 7235833014213075648}
   m_Layer: 9
   m_Name: Spawn Z8
   m_TagString: Untagged
@@ -288,6 +387,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014213075648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852548486411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053852615705434
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852615705433}
+  - component: {fileID: 7235833014760759689}
   m_Layer: 9
   m_Name: Spawn X2
   m_TagString: Untagged
@@ -318,6 +431,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014760759689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852615705434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053852618778740
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852618778731}
+  - component: {fileID: 7235833014887911515}
   m_Layer: 9
   m_Name: Spawn X8
   m_TagString: Untagged
@@ -348,6 +475,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014887911515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852618778740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053852630277518
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852630277517}
+  - component: {fileID: 7235833015016561055}
   m_Layer: 9
   m_Name: Spawn Z2
   m_TagString: Untagged
@@ -378,6 +519,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015016561055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852630277518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053852680545216
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852680545223}
+  - component: {fileID: 7235833013969147402}
   m_Layer: 9
   m_Name: Spawn X6
   m_TagString: Untagged
@@ -408,6 +563,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833013969147402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852680545216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053852707623196
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852707623187}
+  - component: {fileID: 7235833015830756702}
   m_Layer: 9
   m_Name: Spawn X1
   m_TagString: Untagged
@@ -438,6 +607,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015830756702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852707623196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053852931650494
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053852931650493}
+  - component: {fileID: 7235833013936973950}
   m_Layer: 9
   m_Name: Spawn Z3
   m_TagString: Untagged
@@ -468,6 +651,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833013936973950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053852931650494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053853344207380
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053853344207371}
+  - component: {fileID: 7235833015044657464}
   m_Layer: 9
   m_Name: Spawn Z1
   m_TagString: Untagged
@@ -498,6 +695,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015044657464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053853344207380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053853535910967
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053853535910966}
+  - component: {fileID: 7235833015328656352}
   m_Layer: 9
   m_Name: Spawn X3
   m_TagString: Untagged
@@ -528,6 +739,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015328656352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053853535910967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
 --- !u!1 &6538053853544005243
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053853544005242}
+  - component: {fileID: 7235833014026518116}
   m_Layer: 9
   m_Name: Spawn Z9
   m_TagString: Untagged
@@ -558,6 +783,19 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833014026518116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053853544005243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
 --- !u!1 &6538053853650192958
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6538053853650192957}
+  - component: {fileID: 7235833015556442540}
   m_Layer: 9
   m_Name: Spawn Z7
   m_TagString: Untagged
@@ -588,3 +827,16 @@ Transform:
   m_Father: {fileID: 6538053852417600067}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7235833015556442540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6538053853650192958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7d5f9f80db3d242adab15018eb35a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyFactory: {fileID: 5182063650994134617, guid: 921bc2d05d42bd2429501cd154757d0b, type: 3}
