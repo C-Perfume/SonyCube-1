@@ -8,20 +8,22 @@ public class MoveBlockEnemyX : MonoBehaviour
     float currTime = 0;
     //이동가능
     bool movable = true;
-
-
-    
+       
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Destroy(gameObject, 18);
+        EnemyManagement.Enm1Cnt--;
     }
 
     public float time = 1f;
     public GameObject cube;
     public float stayTime = 1f;
     int moveCnt;
+
+    float deathtime1 = 0;
+    public float deathtime2 = 18;
 
     // Update is called once per frame
     void Update()
@@ -61,8 +63,12 @@ public class MoveBlockEnemyX : MonoBehaviour
                 currTime = 0;
             }
         }
-
-        Destroy(gameObject, 18);
-        //스태틱 소환가능수+1
+        deathtime1 += Time.deltaTime;
+        if (deathtime1 > deathtime2)
+        {
+            deathtime1 = 0;
+            Destroy(gameObject);
+            EnemyManagement.Enm1Cnt = 0;
+        }
     }
 }
