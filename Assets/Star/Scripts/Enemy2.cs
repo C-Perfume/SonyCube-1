@@ -12,14 +12,12 @@ public class Enemy2 : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {  
-        
-       Destroy(gameObject, destroyT);
-
+    {
+        Destroy(gameObject, destroyT);
     }
     private void Update()
     {
-        
+
         if (isDrop)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
@@ -28,13 +26,13 @@ public class Enemy2 : MonoBehaviour
                 isDrop = false;
                 transform.position = new Vector3(transform.position.x, 1, transform.position.z);
             }
-        } 
+        }
         currT += Time.deltaTime;
 
         if (currT >= stayT) transform.position += transform.up * speed * Time.deltaTime;
-       
+
     }
 
-    
+
 
 }

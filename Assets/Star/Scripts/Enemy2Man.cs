@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Enemy2Man : MonoBehaviour
 {
-    public GameObject EnemyFactory;
-    float SpawnSpeed; 
-     float currentTime;
-
+    public GameObject EnemyFactoryX;
+    public GameObject EnemyFactoryZ;
+    float SpawnSpeed;
+    float currentTime;
+    int ran;
     // Start is called before the first frame update
-    void Start()
-    {
-        SpawnSpeed = Random.Range(0f, 14f);
-    }
+  
 
     // Update is called once per frame
     void Update()
@@ -20,17 +18,27 @@ public class Enemy2Man : MonoBehaviour
         currentTime += Time.deltaTime;
         if (SpawnSpeed < currentTime)
         {
+            ran = Random.Range(0, 17);
             Spawn();
             currentTime = 0;
             //시간 초기화
-            SpawnSpeed = Random.Range(6f, 20f);
+            SpawnSpeed = Random.Range(3, 8);
             //랜덤한 시간에 생성
+
         }
     }
     void Spawn()
     {
-        GameObject enemy = Instantiate(EnemyFactory);
-        enemy.transform.position = transform.position;
+        if (ran >= 9)
+        {
+            GameObject enemy = Instantiate(EnemyFactoryX);
+            enemy.transform.position = transform.GetChild(ran).position;
+        }
+        else
+        {
+            GameObject enemy = Instantiate(EnemyFactoryZ);
+            enemy.transform.position = transform.GetChild(ran).position;
+        }
+
     }
-   
 }
