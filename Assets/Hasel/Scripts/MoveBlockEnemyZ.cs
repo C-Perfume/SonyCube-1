@@ -12,6 +12,12 @@ public class MoveBlockEnemyZ : MonoBehaviour
     public float stayTime = 1f;
     int moveCnt;
 
+
+    private void Start()
+    {
+        Destroy(gameObject, 18);
+    }
+
     void Update()
     {
         if (movable)
@@ -49,8 +55,5 @@ public class MoveBlockEnemyZ : MonoBehaviour
                 currTime = 0;
             }
         }
-
-        Destroy(gameObject, 18);
-        //스태틱 소환가능수+1
     }
 }
