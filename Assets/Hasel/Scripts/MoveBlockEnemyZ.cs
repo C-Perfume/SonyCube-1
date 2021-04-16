@@ -12,10 +12,13 @@ public class MoveBlockEnemyZ : MonoBehaviour
     public float stayTime = 1f;
     int moveCnt;
 
+    float deathtime1 = 0;
+    public float deathtime2 = 18;
+
 
     private void Start()
     {
-        Destroy(gameObject, 18);
+        
     }
 
     void Update()
@@ -54,6 +57,13 @@ public class MoveBlockEnemyZ : MonoBehaviour
                 movable = true;
                 currTime = 0;
             }
+        }
+        deathtime1 += Time.deltaTime;
+        if (deathtime1 > deathtime2)
+        {
+            deathtime1 = 0;
+            Destroy(gameObject);
+            EnemyManagement.Enm1Cnt = 0;
         }
     }
 }

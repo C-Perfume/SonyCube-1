@@ -8,14 +8,11 @@ public class EnemyManagement : MonoBehaviour
     public static EnemyManagement instance;
     //소환된 적의 수량
     public static int Enm1Cnt;
-    //지정 할 최대 소환 수량
-    public static int Enm1max=3;
-    public static bool Enm1SpawnEnable;
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    //지정 할 최대 소환 수량
+    public static int Enm1max=2;
+
+    public static bool Enm1SpawnEnable;
 
     void Start()
     {
@@ -26,7 +23,7 @@ public class EnemyManagement : MonoBehaviour
         //Debug.Log(Enm1SpawnEnable);
         if (Enm1Cnt < Enm1max) Enm1SpawnEnable = true;
         if (Enm1Cnt >= Enm1max) Enm1SpawnEnable = false;
-        //Debug.Log(Enm1Cnt);
+        Debug.Log(Enm1Cnt);
         //Debug.Log(Enm1max);
     }
 
