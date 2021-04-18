@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DZFire_Hasel : MonoBehaviour
+public class DZFire_Enm1 : MonoBehaviour
 {
     public GameObject dangerZF;
     public GameObject startP;
@@ -10,8 +10,6 @@ public class DZFire_Hasel : MonoBehaviour
     float creatT = 1;
     float dZoneCnt = 0;
     bool dz = false;
-
-
    
     void Update()
     {

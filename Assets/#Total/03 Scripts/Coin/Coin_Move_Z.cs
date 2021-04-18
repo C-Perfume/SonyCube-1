@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin_MoveX : MonoBehaviour
+public class Coin_Move_Z : MonoBehaviour
 {
     float currTime = 0;
     bool movable = true;
@@ -12,36 +12,37 @@ public class Coin_MoveX : MonoBehaviour
     int moveCnt;
     public float flySpd = 3f;
     public float SpinSpd = 3f;
-    bool rightM = true;
+    bool backM = true;
     bool spin = false;
-
+   
     void Start()
     { Destroy(gameObject, 13); }
     void Update()
     {
-        if (rightM)
+        if (backM)
         {
             movable = false;
-            transform.position += Vector3.right * flySpd * Time.deltaTime;
+            transform.position += Vector3.back * flySpd * Time.deltaTime;
 
-            if (transform.position.x >= -4)
-            { 
-                rightM = false;
+            if (transform.position.z <= 4)
+            {
+                backM = false;
                 movable = true;
                 spin = true;
-                
+
             }
         }
-        if (spin) 
+        if (spin)
         {
             if (cube != null) cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
 
         }
+
         if (movable)
         {
 
             currTime += Time.deltaTime;
-            transform.position += transform.right * Time.deltaTime * (1 / time);
+            transform.position -= transform.forward * Time.deltaTime * (1 / time);
             if (moveCnt >= 9)
             {
                 transform.position -= transform.up * Time.deltaTime;
@@ -63,22 +64,12 @@ public class Coin_MoveX : MonoBehaviour
                 currTime = 0;
             }
         }
-    }
 
+    }
     private void OnCollisionEnter(Collision collision)
     {
         GameObject pl = GameObject.Find("Player");
         if (pl == collision.gameObject)
         { Destroy(gameObject); }
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    //스폰이 포함된 충돌체가 있다면
-    //    if (collision.gameObject.name.Contains("Spawn"))
-    //    {// Rigidbody 컴포넌트를 가져와서 
-    //        Rigidbody rb = GetComponent<Rigidbody>();
-    //        //회전을 잠근다.
-    //        rb.constraints = RigidbodyConstraints.None;
-    //    }
-    //}
 }

@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerM : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     
     float currTime = 0;
     public float stopTime = 1;
     bool m = true;
     int mCunt = 0;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
+    // Update is called once per frame
     void Update()
     {
+
         if (m)
         {
             
@@ -61,5 +68,6 @@ public class PlayerM : MonoBehaviour
                 currTime = 0;
             }
         }
+
     }
 }

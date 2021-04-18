@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin_MoveX : MonoBehaviour
+public class Coin_Move_X : MonoBehaviour
 {
     float currTime = 0;
     bool movable = true;
@@ -37,6 +37,7 @@ public class Coin_MoveX : MonoBehaviour
             if (cube != null) cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
 
         }
+
         if (movable)
         {
 
@@ -63,6 +64,8 @@ public class Coin_MoveX : MonoBehaviour
                 currTime = 0;
             }
         }
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
