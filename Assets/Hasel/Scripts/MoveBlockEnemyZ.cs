@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MoveBlockEnemyZ : MonoBehaviour
 {
+    float currTime = 0; //흐르는시간
+    bool movable = true; //이동 여부
 
-    float currTime = 0;
-    bool movable = true;
     public float time = 1f;
     public GameObject cube;
     public float stayTime = 1f;
@@ -14,13 +14,7 @@ public class MoveBlockEnemyZ : MonoBehaviour
 
     float deathtime1 = 0;
     public float deathtime2 = 18;
-
-
-    private void Start()
-    {
-        
-    }
-
+    
     void Update()
     {
         if (movable)
@@ -41,9 +35,7 @@ public class MoveBlockEnemyZ : MonoBehaviour
                 movable = false;
                 currTime = 0;
                 moveCnt++;
-                //print(moveCnt);
 
-                //print(f);
                 cube.transform.Rotate(90 * f * (1 / time), 0, 0);
                 transform.position += transform.forward * f * (1 / time);
             }
@@ -65,5 +57,13 @@ public class MoveBlockEnemyZ : MonoBehaviour
             Destroy(gameObject);
             EnemyManagement.Enm1Cnt = 0;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name.Contains("Player"))
+        {
+            Destroy(other.gameObject);
+        }
+        //else Destroy(other.gameObject);
     }
 }
