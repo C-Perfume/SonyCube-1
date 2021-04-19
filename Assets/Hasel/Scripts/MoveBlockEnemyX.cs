@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class MoveBlockEnemyX : MonoBehaviour
 {
-    //흐르는시간
-    float currTime = 0;
-    //이동가능
-    bool movable = true;
-       
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Destroy(gameObject, 18);
-        EnemyManagement.Enm1Cnt--;
-    }
+    float currTime = 0; //흐르는시간
+    bool movable = true; //이동 여부
 
     public float time = 1f;
     public GameObject cube;
@@ -25,7 +15,6 @@ public class MoveBlockEnemyX : MonoBehaviour
     float deathtime1 = 0;
     public float deathtime2 = 18;
 
-    // Update is called once per frame
     void Update()
     {
         if (movable)
@@ -46,9 +35,7 @@ public class MoveBlockEnemyX : MonoBehaviour
                 movable = false;
                 currTime = 0;
                 moveCnt++;
-                //print(moveCnt);
 
-                //print(f);
                 cube.transform.Rotate(0, 0, 90 * f * (1 / time));
                 transform.position -= transform.right * f * (1 / time);
             }
@@ -70,5 +57,13 @@ public class MoveBlockEnemyX : MonoBehaviour
             Destroy(gameObject);
             EnemyManagement.Enm1Cnt = 0;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name.Contains("Player"))
+        {
+            Destroy(other.gameObject);
+        }
+        //else Destroy(other.gameObject);
     }
 }
