@@ -17,7 +17,6 @@ public class Enemy2 : MonoBehaviour
     }
     private void Update()
     {
-
         if (isDrop)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
@@ -32,7 +31,5 @@ public class Enemy2 : MonoBehaviour
         if (currT >= stayT) transform.position += transform.up * speed * Time.deltaTime;
 
     }
-
-
 
 }
