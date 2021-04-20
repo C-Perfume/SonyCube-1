@@ -19,7 +19,7 @@ public class ObRotate : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             float mx = Input.GetAxis("Mouse X");
-            if (useH) rotY += mx * rotSpeed * Time.deltaTime;
+            if (useH) rotY -= mx * rotSpeed * Time.deltaTime;
             rotY = Mathf.Clamp(rotY, -90, 90);
             transform.localEulerAngles = new Vector3(0, rotY+rot1, 0);
         }
