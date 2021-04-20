@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1830723333990587297}
   - component: {fileID: 2138896455309509012}
   m_Layer: 12
-  m_Name: RoCX
+  m_Name: RoCXX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b403fed5af1df8b4bbf0d92a72c101d0, type: 2}
+  - {fileID: 2100000, guid: 9c82dca98e4038342b3dc39b9a9619b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,9 +118,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 928347012721866104}
-  - component: {fileID: 8281777621226091839}
+  - component: {fileID: -4566866885568501804}
   m_Layer: 12
-  m_Name: CoinX
+  m_Name: 1-1 RedCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8281777621226091839
+--- !u!114 &-4566866885568501804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,11 +150,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3650207289856649155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a08ee8df84038940b4ae8968949a9f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 82d35626ff07c8c479f0163a162e3821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.8
-  cube: {fileID: 1830723333990587296}
-  stayTime: 0.2
-  flySpd: 6
-  SpinSpd: 3
+  dropSpd: 2
+  spinSpd: 2
+  stayT: 7
+  destroyT: 10
+  redC: {fileID: 1830723333990587296}

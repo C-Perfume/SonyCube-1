@@ -8,12 +8,35 @@ public class PlayerM : MonoBehaviour
     
     float currTime = 0;
     public float stopTime = 1;
+    public float extraTime = 2;
     bool m = true;
     int mCunt = 0;
+    // Start is called before the first frame update
+    public GameObject goBG;
 
+     void Start()
+    {
+        goBG = GameObject.Find("Canvas/GameOverBG");
+        goBG.SetActive(false);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name.Contains("Coin") || other.gameObject.name.Contains("RoC"))
+        { } 
+        else { goBG.SetActive(true); }
+        
+    }
+
+    // Update is called once per frame
     void Update()
     {
-        if (m)
+        if (mCunt == 0)
+        {
+            currTime += Time.deltaTime;
+            if (currTime > stopTime + extraTime)
+            { mCunt = 1; currTime = 0; } 
+        }
+        if (m && mCunt == 1)
         {
             
             if (Input.GetKeyDown(KeyCode.S))
@@ -46,20 +69,21 @@ public class PlayerM : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             { mCunt++; }
 
-            if (mCunt >= 1)
+            if (mCunt >= 2)
             {
                 m = false;
-                mCunt = 0;
+                mCunt = 1;
             }
         }
         else
         {
             currTime += Time.deltaTime;
-            if (mCunt == 0 && currTime >= stopTime)
+            if (mCunt == 1 && currTime >= stopTime)
             {
                 m = true;
                 currTime = 0;
             }
         }
+
     }
 }

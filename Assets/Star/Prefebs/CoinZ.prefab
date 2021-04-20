@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1830723333990587298}
   - component: {fileID: 1830723333990587297}
   - component: {fileID: 840649494791594591}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RoCZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928347012721866104}
   - component: {fileID: 8128825648482587496}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CoinZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
