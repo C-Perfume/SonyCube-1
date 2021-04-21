@@ -80,6 +80,9 @@ public class MoveBlockEnemyZ : MonoBehaviour
     {
         GameObject user = GameObject.Find("PlayersEmpty");
         if (user == other.gameObject)
-        { Destroy(user); }
+        {
+            print(user);
+            Destroy(user);
+        }
     }
 }
