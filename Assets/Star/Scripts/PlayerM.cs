@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerM : MonoBehaviour
 {
+    //선택가능한 Players 배열
+    public GameObject[] playerModels;
     
     float currTime = 0;
     public float stopTime = 1;
@@ -16,6 +18,10 @@ public class PlayerM : MonoBehaviour
 
      void Start()
     {
+        // 모델선택
+        int selectedModel = GameManager.instance.selectedPlayer;
+        playerModels[selectedModel].SetActive(true);
+
         goBG = GameObject.Find("Canvas/GameOverBG");
         goBG.SetActive(false);
     }
