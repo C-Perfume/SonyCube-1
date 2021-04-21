@@ -7,7 +7,7 @@ public class DZFire_Hasel : MonoBehaviour
     public GameObject dangerZF;
     public GameObject startP;
     float currT;
-    float creatT = 1.65f;
+    float creatT = 1.5f;
     float dZoneCnt = 0;
     bool dz = false;
 
@@ -30,7 +30,7 @@ public class DZFire_Hasel : MonoBehaviour
                 dZ.transform.position = transform.position;
                 dZoneCnt++;
                 currT = 0;
-                creatT -= 0.025f;
+                //creatT += 0.03f;
             }
         }
 

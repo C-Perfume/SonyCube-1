@@ -74,15 +74,15 @@ public class MoveBlockEnemyX : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        GameObject user = GameObject.Find("Player");
-        if (user == collision.gameObject)
-        { Destroy(user); }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    GameObject user = GameObject.Find("Player");
+    //    if (user == collision.gameObject)
+    //    { Destroy(user); }
+    //}
     private void OnTriggerEnter(Collider other)
     {
-        GameObject user = GameObject.Find("Player");
+        GameObject user = GameObject.Find("PlayersEmpty");
         if (user == other.gameObject)
         { Destroy(user); }
     }
