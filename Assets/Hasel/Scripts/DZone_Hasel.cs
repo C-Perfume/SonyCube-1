@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class DZone_Hasel : MonoBehaviour
 {
-    public float destroyT = 0;
-    public float scaleT = 0.8f; 
-    public float scaleSize = 1f;
+    public float destroyT = 1f;
+    public float scaleT = 1f; 
+    public float scaleSize = 0.99f;
     bool scale = true;
     float scaleCut = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, destroyT);
+        destroyT = scaleT * 1.33f;
+        Destroy(gameObject, destroyT);        
     }
 
     // Update is called once per frame
