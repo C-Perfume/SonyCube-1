@@ -11443,6 +11443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayersEmpty
       objectReference: {fileID: 0}
+    - target: {fileID: 6794917962951493685, guid: 0f6e01d22f1ea8941b6029712feffd81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6794917962951493687, guid: 0f6e01d22f1ea8941b6029712feffd81, type: 3}
       propertyPath: goBG
       value: 

@@ -23,13 +23,13 @@ public class PlayerM : MonoBehaviour
         playerModels[selectedModel].SetActive(true);
 
         goBG = GameObject.Find("Canvas/GameOverBG");
-        if (goBG != null) goBG.SetActive(false);
+        if (goBG.activeSelf != false ) goBG.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Contains("Coin") || other.gameObject.name.Contains("RoC"))
         { } 
-        else { goBG.SetActive(true); }
+        else if (goBG.activeSelf == false) { goBG.SetActive(true); }
         
     }
 
