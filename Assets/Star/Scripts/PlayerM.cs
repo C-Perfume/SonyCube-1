@@ -23,7 +23,7 @@ public class PlayerM : MonoBehaviour
         playerModels[selectedModel].SetActive(true);
 
         goBG = GameObject.Find("Canvas/GameOverBG");
-        goBG.SetActive(false);
+        if (goBG != null) goBG.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
