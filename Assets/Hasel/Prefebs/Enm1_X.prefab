@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1579318487704829542}
   - component: {fileID: 1579318487704829537}
   - component: {fileID: 1579318487704829536}
-  - component: {fileID: 1579318487704829539}
   m_Layer: 8
   m_Name: RoX
   m_TagString: Untagged
@@ -28,9 +27,8 @@ Transform:
   m_GameObject: {fileID: 1579318487704829549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8568750554090228638}
+  m_LocalScale: {x: 1.0526316, y: 1, z: 1.0526316}
+  m_Children: []
   m_Father: {fileID: 3681377963836694515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1579318487704829539
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579318487704829549}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3681377963836694517
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3681377963836694515}
   - component: {fileID: 3681377963836694516}
-  - component: {fileID: 3681377963836694514}
+  - component: {fileID: 1226640374568381358}
   m_Layer: 0
   m_Name: Enm1_X
   m_TagString: Untagged
@@ -122,10 +107,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3681377963836694517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.16, y: 1, z: 0}
+  m_LocalPosition: {x: -4, y: 1, z: 0}
   m_LocalScale: {x: 0.95, y: 1, z: 0.95}
   m_Children:
   - {fileID: 1579318487704829542}
+  - {fileID: 8568750554090228638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,8 +132,8 @@ MonoBehaviour:
   stayTime: 1
   deathtime2: 18
   flySpeed: 7
---- !u!135 &3681377963836694514
-SphereCollider:
+--- !u!65 &1226640374568381358
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -157,7 +143,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8568750554090228639
 GameObject:
@@ -184,11 +170,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8568750554090228639}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.0526316, y: -0.39999998, z: 0}
+  m_LocalScale: {x: 1.0526316, y: 1, z: 1.0526316}
   m_Children: []
-  m_Father: {fileID: 1579318487704829542}
-  m_RootOrder: 0
+  m_Father: {fileID: 3681377963836694515}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &788133751389371544
 MonoBehaviour:
