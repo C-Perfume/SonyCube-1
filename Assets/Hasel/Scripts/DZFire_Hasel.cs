@@ -7,16 +7,20 @@ public class DZFire_Hasel : MonoBehaviour
     public GameObject dangerZF;
     public GameObject startP;
     float currT;
-    float creatT = 1;
+    float creatT = 1.65f;
     float dZoneCnt = 0;
     bool dz = false;
 
-
-   
+    private void Start()
+    {
+        currT = .95f;
+    }
     void Update()
     {
-        if (startP.transform.position.x > -6 && startP.transform.position.z < 6)
-        { dz = true; }
+        if (startP.transform.position.x > -6 && startP.transform.position.z < 6 && startP.transform.position.x < 5 && startP.transform.position.z > -5)
+        {
+            dz = true;
+        }
         if (dz)
         {
             currT += Time.deltaTime;
@@ -26,10 +30,11 @@ public class DZFire_Hasel : MonoBehaviour
                 dZ.transform.position = transform.position;
                 dZoneCnt++;
                 currT = 0;
+                creatT -= 0.025f;
             }
         }
 
-        if (dZoneCnt > 8)
+        if (dZoneCnt > 7)
         {
             dz = false;
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 382838707110875088}
   - component: {fileID: 4859313208470507023}
   m_Layer: 8
-  m_Name: Enemy_Block_X
+  m_Name: Enm1_X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2809186293759751451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99, y: 1, z: 0.99}
   m_Children:
   - {fileID: 2809186294035762728}
   - {fileID: 5043100271279176656}
@@ -50,6 +50,7 @@ MonoBehaviour:
   cube: {fileID: 2809186294035762723}
   stayTime: 1
   deathtime2: 18
+  flySpeed: 7
 --- !u!65 &4859313208470507023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -169,6 +170,10 @@ PrefabInstance:
       propertyPath: startP
       value: 
       objectReference: {fileID: 2809186293759751451}
+    - target: {fileID: -8672917847870988303, guid: e45683b9dd83c4047b6d0470fec3bad2, type: 3}
+      propertyPath: dangerZF
+      value: 
+      objectReference: {fileID: 3703985122382233411, guid: 6b68cd06150039a41990591d9f87b5d2, type: 3}
     - target: {fileID: 8915378391540361462, guid: e45683b9dd83c4047b6d0470fec3bad2, type: 3}
       propertyPath: m_Name
       value: DZPointX_Hasel

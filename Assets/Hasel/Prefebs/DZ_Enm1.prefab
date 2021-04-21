@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3703985122382233409}
   - component: {fileID: 266941570089163444}
   m_Layer: 0
-  m_Name: Danger Zone_Hasel
+  m_Name: DZ_Enm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da8241e705d402489a9d486da356cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyT: 2
-  scaleT: 1.5
-  scaleSize: 0.9
-  enemy: {fileID: 2809186293759751451, guid: 8798b246f19ab0e4e8cf9b396630e69e, type: 3}
+  destroyT: 1.2
+  scaleT: 1
+  scaleSize: 0.99
