@@ -8,9 +8,5 @@ public class Coin_OnTrigger : MonoBehaviour
     {
         if (other.gameObject.name.Contains("Pla")) Destroy(gameObject);
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.name.Contains("Playe")) Destroy(gameObject);
-    //}
-}
+   }
 

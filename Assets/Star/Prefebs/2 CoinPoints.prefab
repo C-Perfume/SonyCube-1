@@ -215,7 +215,7 @@ MonoBehaviour:
   EnemyFactoryZ: {fileID: 3650207289856649155, guid: b8b33a22d2675ce47aebcfd08eac4a5f, type: 3}
   ranTimeMinU: 15
   ranTimeMaxU: 25
-  ranTimeMin: 5
+  ranTimeMin: 8
   ranTimeMax: 10
   ranCnt: 9
 --- !u!1 &2763908567233199491
