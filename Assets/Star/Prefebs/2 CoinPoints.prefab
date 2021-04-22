@@ -218,6 +218,7 @@ MonoBehaviour:
   ranTimeMin: 10
   ranTimeMax: 15
   ranCnt: 9
+  childLength: 18
 --- !u!1 &2763908567233199491
 GameObject:
   m_ObjectHideFlags: 0

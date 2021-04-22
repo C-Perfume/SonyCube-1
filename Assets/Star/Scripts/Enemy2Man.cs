@@ -14,6 +14,7 @@ public class Enemy2Man : MonoBehaviour
     float currentTime;
     public int ranCnt = 9;
     int ran;
+    public int childLength = 0;
     // Start is called before the first frame update
 
     void Start()
@@ -26,7 +27,7 @@ public class Enemy2Man : MonoBehaviour
         currentTime += Time.deltaTime;
         if (spawnSpeed < currentTime)
         {
-            ran = Random.Range(0, 10);
+            ran = Random.Range(0, childLength);
             Spawn();
             currentTime = 0;
             //시간 초기화

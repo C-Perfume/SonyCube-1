@@ -32,4 +32,5 @@ public class RedCoinR : MonoBehaviour
         if (currT >= stayT) transform.position += transform.up * dropSpd * Time.deltaTime;
     
     }
+    
 }

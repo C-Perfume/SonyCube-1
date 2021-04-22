@@ -5,15 +5,21 @@ using UnityEngine;
 public class DirTime : MonoBehaviour
 {
     float time = 0;
-    public float startT = 2;
+    public float startT = 1;
     public GameObject dir;
     bool istrue = false;
     int stop = 0;
-    // Start is called before the first frame update
-    void Update()
+     void Start()
+    {
+        GameObject dirP = Instantiate(dir);
+        dirP.transform.position = transform.position;
+        dirP.transform.eulerAngles = transform.eulerAngles;
+        Destroy(dirP, 0.5f);
+    }
+       void Update()
     {
         time += Time.deltaTime;
-        if (stop == 0)
+        if (stop < 2)
         {
             if (time >= startT)
             {
@@ -24,7 +30,9 @@ public class DirTime : MonoBehaviour
                     GameObject dirP = Instantiate(dir);
                     dirP.transform.position = transform.position;
                     dirP.transform.eulerAngles = transform.eulerAngles;
-                    stop++;
+                    time = 0;
+                    
+                    Destroy(dirP, 0.5f); stop++;
                 }
              }
         }

@@ -34,7 +34,7 @@ public class Coin_MoveX : MonoBehaviour
         }
         if (spin) 
         {
-            if (cube != null) cube.transform.Rotate(90 * SpinSpd * Time.deltaTime, 0, 0);
+            if (cube != null) cube.transform.Rotate(0, 90 * SpinSpd * Time.deltaTime, 0);
 
         }
         if (movable)

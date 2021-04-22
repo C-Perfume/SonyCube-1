@@ -7,7 +7,7 @@ public class PlayerM : MonoBehaviour
 {
     //선택가능한 Players 배열
     public GameObject[] playerModels;
-    
+
     float currTime = 0;
     public float stopTime = 1;
     public float extraTime = 2;
@@ -15,20 +15,24 @@ public class PlayerM : MonoBehaviour
     int mCunt = 0;
     // Start is called before the first frame update
     public GameObject goBG;
-
-     void Start()
+    AudioSource stageBGM;
+    void Start()
     {
         // 모델선택
         int selectedModel = GameManager.instance.selectedPlayer;
         playerModels[selectedModel].SetActive(true);
 
         goBG = GameObject.Find("Canvas/GameOverBG");
+        stageBGM = GameObject.Find("StageBG").GetComponent<AudioSource>();
         goBG.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.name.Contains("Coin") && !other.gameObject.name.Contains("RoC"))
-        { goBG.SetActive(true); } 
+        {
+            goBG.SetActive(true);
+            stageBGM.Pause();
+        }
     }
 
     // Update is called once per frame
@@ -38,11 +42,11 @@ public class PlayerM : MonoBehaviour
         {
             currTime += Time.deltaTime;
             if (currTime > stopTime + extraTime)
-            { mCunt = 1; currTime = 0; } 
+            { mCunt = 1; currTime = 0; }
         }
         if (m && mCunt == 1)
         {
-            
+
             if (Input.GetKeyDown(KeyCode.S))
             {
                 transform.position += Vector3.right;

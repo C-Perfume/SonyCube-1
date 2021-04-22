@@ -15,12 +15,18 @@ public class Enemy3 : MonoBehaviour
     GameObject target;
     public float destroyT = 10;
     public float stayT = 4;
-
+   // int i = 0;
+    Vector3 dir;
+    Vector3 originDir;
     void Start()
     {
+       
         move1 = Enemy3move.StayT;
         StartCoroutine(StayT());
-        Invoke("DestroyObject", destroyT);
+        Invoke("DestroyObject", destroyT); 
+        target = GameObject.Find("PlayersEmpty");
+        originDir = target.transform.position - transform.position;
+        originDir.Normalize();
     }
     void DestroyObject() { Destroy(gameObject); }
     private void OnTriggerEnter(Collider other)
@@ -32,7 +38,6 @@ public class Enemy3 : MonoBehaviour
     }
     void Update()
     {
-
         if (transform.position.y > 1)
         { transform.position += Vector3.down * Time.deltaTime; }
         else
@@ -57,14 +62,17 @@ public class Enemy3 : MonoBehaviour
 
     void Move()
     {
-        target = GameObject.Find("PlayersEmpty");
         if (target != null)
-        {
-            Vector3 dir = target.transform.position - transform.position;
+        {   
+            dir = originDir;
+            //originDir 을 5번 뒤에 수정하도록 해야 함
+            float dist = Vector3.Distance(transform.position, target.transform.position);
             //transform.position += dir * Time.deltaTime;
 
-            if (dir.x >= 0 && dir.z >= 0)
+            if (dist <= 0.1) { transform.position = target.transform.position; }
+            else if (dir.x >= 0 && dir.z >= 0)
             {
+               
                 if (dir.x > dir.z)
                 {
                     transform.position += Vector3.right;
@@ -73,7 +81,7 @@ public class Enemy3 : MonoBehaviour
                 else
                 {
                     transform.position += Vector3.forward;
-                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    transform.eulerAngles = new Vector3(0, 0, 0);
                 }
             }
             else if (dir.x >= 0 && dir.z < 0)
@@ -86,7 +94,7 @@ public class Enemy3 : MonoBehaviour
                 else
                 {
                     transform.position -= Vector3.forward;
-                    transform.eulerAngles = new Vector3(0, -0, 0);
+                    transform.eulerAngles = new Vector3(0, -180, 0);
                 }
             }
             else if (dir.x < 0 && dir.z < 0)
@@ -99,7 +107,7 @@ public class Enemy3 : MonoBehaviour
                 else
                 {
                     transform.position -= Vector3.forward;
-                    transform.eulerAngles = new Vector3(0, -0, 0);
+                    transform.eulerAngles = new Vector3(0, -180, 0);
                 }
             }
             else //if (dir.x < 0 && dir.z >= 0)
@@ -112,7 +120,7 @@ public class Enemy3 : MonoBehaviour
                 else
                 {
                     transform.position += Vector3.forward;
-                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    transform.eulerAngles = new Vector3(0, -0, 0);
                 }
             }
         }
@@ -122,6 +130,8 @@ public class Enemy3 : MonoBehaviour
     IEnumerator Stay()
     {
         yield return new WaitForSeconds(1);
+        originDir = target.transform.position - transform.position;
+        originDir.Normalize();
         move1 = Enemy3move.Move;
     }
 
