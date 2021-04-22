@@ -82,11 +82,9 @@ public class MoveBlockEnemyX : MonoBehaviour
     //}
     private void OnTriggerEnter(Collider other)
     {
-        GameObject user = GameObject.Find("PlayersEmpty");
-        if (user == other.gameObject)
+        if (other.gameObject.layer == 7)
         {
-            print(user);
-            Destroy(user);
+            Destroy(other.gameObject);
         }
     }
 }

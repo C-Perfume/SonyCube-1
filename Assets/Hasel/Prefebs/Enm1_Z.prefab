@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673203720956087879}
   - component: {fileID: 7719798308805736769}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DZPointZ_Hasel
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5879261946691250722}
   - component: {fileID: 5879261946691250723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enm1_Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
