@@ -29,8 +29,6 @@ public class PlayerM : MonoBehaviour
     {
         if (!other.gameObject.name.Contains("Coin") && !other.gameObject.name.Contains("RoC"))
         { goBG.SetActive(true); } 
-        
-        
     }
 
     // Update is called once per frame
@@ -48,28 +46,28 @@ public class PlayerM : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S))
             {
                 transform.position += Vector3.right;
-                transform.eulerAngles = new Vector3(0, 90, 0);
+                transform.eulerAngles = new Vector3(0, -0, 0);
                 if (transform.position.x >= 4) transform.position = new Vector3(4, transform.position.y, transform.position.z);
             }
 
             if (Input.GetKeyDown(KeyCode.W))
             {
                 transform.position += Vector3.left;
-                transform.eulerAngles = new Vector3(0, -90, 0);
+                transform.eulerAngles = new Vector3(0, -180, 0);
                 if (transform.position.x <= -4) transform.position = new Vector3(-4, transform.position.y, transform.position.z);
             }
 
             if (Input.GetKeyDown(KeyCode.A))
             {
                 transform.position += Vector3.back;
-                transform.eulerAngles = new Vector3(0, -180, 0);
+                transform.eulerAngles = new Vector3(0, 90, 0);
                 if (transform.position.z <= -4) transform.position = new Vector3(transform.position.x, transform.position.y, -4);
             }
 
             if (Input.GetKeyDown(KeyCode.D))
             {
                 transform.position += Vector3.forward;
-                transform.eulerAngles = new Vector3(0, -0, 0);
+                transform.eulerAngles = new Vector3(0, -90, 0);
                 if (transform.position.z >= 4) transform.position = new Vector3(transform.position.x, transform.position.y, 4);
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))

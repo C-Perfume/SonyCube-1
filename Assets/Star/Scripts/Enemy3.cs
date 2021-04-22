@@ -25,7 +25,7 @@ public class Enemy3 : MonoBehaviour
     void DestroyObject() { Destroy(gameObject); }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Contains("Play") || other.gameObject.name.Contains("Coin"))
+        if (!other.gameObject.name.Contains("Ene"))
         {
             Destroy(other.gameObject);
         }

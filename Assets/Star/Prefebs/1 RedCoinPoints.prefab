@@ -846,8 +846,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyFactoryX: {fileID: 3650207289856649155, guid: 57c34d25cbc3d9146a794c9f838d98f1, type: 3}
   EnemyFactoryZ: {fileID: 3650207289856649155, guid: 57c34d25cbc3d9146a794c9f838d98f1, type: 3}
-  ranTimeMinU: 100
-  ranTimeMaxU: 150
+  ranTimeMinU: 30
+  ranTimeMaxU: 80
   ranTimeMin: 20
   ranTimeMax: 25
   ranCnt: 0
