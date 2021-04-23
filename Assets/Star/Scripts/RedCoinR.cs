@@ -16,7 +16,7 @@ public class RedCoinR : MonoBehaviour
         Destroy(gameObject, destroyT);
     }
     void Update()
-    { if (redC != null) redC.transform.Rotate(90 * spinSpd* Time.deltaTime, 0, 0) ;
+    { if (redC != null) redC.transform.Rotate(0, 90 * spinSpd * Time.deltaTime, 0) ;
 
         if (isDrop)
         {
