@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinScore : MonoBehaviour
+public class CSmanager : MonoBehaviour
 {
     //자기 자신의 인스턴스를 담는것, 자기 자신을 변수 선언
-    public static CoinScore instance;
+    public static CSmanager instance;
 
     //베스트 점수
     int bestCoin;
@@ -17,13 +17,14 @@ public class CoinScore : MonoBehaviour
 
     private void Awake()
     {
-        instance = this; //this = 자기자신을 뜻함
+        instance = this;//this = 자기자신을 뜻함
     }
 
 
     private void Start()
     {
         SetBestCoin(PlayerPrefs.GetInt("BC"));
+
     }
 
     public void AddCoin(int addValue)
@@ -40,6 +41,6 @@ public class CoinScore : MonoBehaviour
     void SetBestCoin(int BC)
     {
         bestCoin = BC; //베스트 코인을 현재 코인으로 갱신        
-        BestCoinUI.text = "Coin : " + bestCoin; //베스트 코인 UI 갱신
+        BestCoinUI.text = "BestScore : " + bestCoin; //베스트 코인 UI 갱신
     }
 }

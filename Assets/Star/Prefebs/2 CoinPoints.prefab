@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd93d6ee1e993040ae5352eb23ddd4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyFactoryX: {fileID: 3650207289856649155, guid: 360d0b2bca89d914189276c1b32ce330, type: 3}
-  EnemyFactoryZ: {fileID: 3650207289856649155, guid: b8b33a22d2675ce47aebcfd08eac4a5f, type: 3}
+  EnemyFactoryX: {fileID: 3650207289856649155, guid: 41f3f4efbc93636479862353d7bb38cc, type: 3}
+  EnemyFactoryZ: {fileID: 3650207289856649155, guid: 0bd2b5b889299ea4389e1ad7c109d8da, type: 3}
   ranTimeMinU: 15
   ranTimeMaxU: 25
   ranTimeMin: 10
