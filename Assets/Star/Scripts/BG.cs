@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class BG : MonoBehaviour
 {
-    public float speed = 5;
-
+    public float speed = 0.1f;
+    Vector3 originP;
+    private void Start()
+    {
+        originP = transform.position;
+    }
     void Update()
     {
-        MeshRenderer mr = GetComponent<MeshRenderer>();
-        Material mat = mr.material;
-        mat.mainTextureOffset += Vector2.right * speed * Time.deltaTime;
+        transform.position -= transform.right * speed * Time.deltaTime;
+        if (transform.position.x == originP.x-18) { transform.position = originP; }
     }
 }
