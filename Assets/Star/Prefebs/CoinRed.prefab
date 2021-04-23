@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29d98c84de51f4da92dbcba606380a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAudio: {fileID: 0}
 --- !u!135 &264308980809186529
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -361,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4945707815571746, guid: 5cbc537826220e04592d5a41a0dd985f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4945707815571746, guid: 5cbc537826220e04592d5a41a0dd985f, type: 3}
       propertyPath: m_LocalPosition.z

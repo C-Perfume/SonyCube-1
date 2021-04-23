@@ -15,9 +15,10 @@ public class Enemy3 : MonoBehaviour
     GameObject target;
     public float destroyT = 10;
     public float stayT = 4;
-   // int i = 0;
+    int i = 0;
     Vector3 dir;
     Vector3 originDir;
+    public int findCnt = 5;
     void Start()
     {
        
@@ -65,7 +66,6 @@ public class Enemy3 : MonoBehaviour
         if (target != null)
         {   
             dir = originDir;
-            //originDir 을 5번 뒤에 수정하도록 해야 함
             float dist = Vector3.Distance(transform.position, target.transform.position);
             //transform.position += dir * Time.deltaTime;
 
@@ -130,9 +130,15 @@ public class Enemy3 : MonoBehaviour
     IEnumerator Stay()
     {
         yield return new WaitForSeconds(1);
-        originDir = target.transform.position - transform.position;
-        originDir.Normalize();
+        i++;
         move1 = Enemy3move.Move;
+        if (i == findCnt)
+        {
+            originDir = target.transform.position - transform.position;
+            originDir.Normalize();
+            i = 0;
+        }
+        
     }
 
     IEnumerator StayT()
