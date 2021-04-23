@@ -91,8 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928347012721866104}
   - component: {fileID: -2518790055025861312}
-  - component: {fileID: 8281777621226091839}
-  - component: {fileID: 3109727822905188500}
+  - component: {fileID: 3204676088205410256}
   - component: {fileID: 3610388681255496057}
   - component: {fileID: 964798045}
   m_Layer: 12
@@ -131,11 +130,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0.8
-  cube: {fileID: 0}
+  cube: {fileID: 1830723333990587296}
   stayTime: 0.2
   flySpd: 3
   SpinSpd: 3
---- !u!114 &8281777621226091839
+--- !u!114 &3204676088205410256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,27 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3650207289856649155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a08ee8df84038940b4ae8968949a9f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec3cb89e73ca804a9c6c4ae212e8a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.8
-  cube: {fileID: 1830723333990587296}
-  stayTime: 0.5
-  flySpd: 6
-  SpinSpd: 3
---- !u!114 &3109727822905188500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3650207289856649155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29d98c84de51f4da92dbcba606380a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinAudio: {fileID: 0}
+  coinAudio: {fileID: 964798045}
 --- !u!135 &3610388681255496057
 SphereCollider:
   m_ObjectHideFlags: 0

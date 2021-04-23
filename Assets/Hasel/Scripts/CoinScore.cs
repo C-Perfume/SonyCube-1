@@ -28,18 +28,14 @@ public class CoinScore : MonoBehaviour
 
     public void AddCoin(int addValue)
     {
-        //1. 찾은 ScoreManager 컴포넌트(클래스) bestCoin 증가
-        bestCoin++;
-        //2. 스코어 UI갱신
-        BestCoinUI.text = "Coin : " + bestCoin;
+        bestCoin+=addValue; //Coin 증가
         SetBestCoin(bestCoin);
-        //베스트 코인 저장
-        PlayerPrefs.SetInt("BC", bestCoin);
+        PlayerPrefs.SetInt("BC", bestCoin); //코인 저장
     }
 
     void SetBestCoin(int BC)
     {
-        bestCoin = BC; //베스트 코인을 현재 코인으로 갱신        
-        BestCoinUI.text = "Coin : " + bestCoin; //베스트 코인 UI 갱신
+        bestCoin = BC; //현재 코인량 갱신        
+        BestCoinUI.text = "Coin : " + BC; //코인 UI 갱신
     }
 }

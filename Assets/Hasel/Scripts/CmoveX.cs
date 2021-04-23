@@ -69,9 +69,8 @@ public class CmoveX : MonoBehaviour
     {
         GameObject pl = GameObject.Find("Player");
         if (pl == collision.gameObject)
-        { 
+        {
             Destroy(gameObject);
-            CoinScore.instance.AddCoin(Random.Range(8,12));
         }
     }
     //private void OnCollisionEnter(Collision collision)

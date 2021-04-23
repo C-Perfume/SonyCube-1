@@ -72,7 +72,6 @@ public class CmoveZ : MonoBehaviour
         if (pl == collision.gameObject)
         {
             Destroy(gameObject);
-            CoinScore.instance.AddCoin(Random.Range(8, 12));
         }
     }
 }

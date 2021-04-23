@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928347012721866104}
   - component: {fileID: -7729149043127813475}
-  - component: {fileID: 845234970067433029}
+  - component: {fileID: 4392569882511370083}
   - component: {fileID: 9058458913020872539}
   - component: {fileID: 1779902040}
   m_Layer: 12
@@ -130,11 +130,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0.8
-  cube: {fileID: 0}
+  cube: {fileID: 1830723333990587296}
   stayTime: 0.2
   flySpd: 3
   SpinSpd: 3
---- !u!114 &845234970067433029
+--- !u!114 &4392569882511370083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3650207289856649155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29d98c84de51f4da92dbcba606380a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec3cb89e73ca804a9c6c4ae212e8a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAudio: {fileID: 0}
+  coinAudio: {fileID: 1779902040}
 --- !u!135 &9058458913020872539
 SphereCollider:
   m_ObjectHideFlags: 0
