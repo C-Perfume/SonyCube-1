@@ -6,7 +6,6 @@ public class BG : MonoBehaviour
 {
     public float speed = 5;
 
-
     void Update()
     {
         MeshRenderer mr = GetComponent<MeshRenderer>();

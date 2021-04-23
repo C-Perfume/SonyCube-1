@@ -37,6 +37,6 @@ public class CSmanager : MonoBehaviour
     void SetBestCoin(int BC)
     {
         bestCoin = BC; //현재 코인량 갱신        
-        BestCoinUI.text = "Coin : " + BC; //코인 UI 갱신s
+        BestCoinUI.text = (BC.ToString()); //코인 UI 갱신s
     }
 }
