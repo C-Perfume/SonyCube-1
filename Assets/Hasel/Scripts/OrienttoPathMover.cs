@@ -19,6 +19,12 @@ public class OrienttoPathMover : MonoBehaviour
 
     void Move()
     {
-        iTween.MoveTo(gameObject, iTween.Hash("path", path, "time", 3, "orienttopath", true, "looktime", .6, "easetype", iTween.EaseType.easeInOutSine));
+        iTween.MoveTo(gameObject, iTween.Hash(
+            "path", path, 
+            "time", 3, 
+            "orienttopath", true, 
+            "looktime", .6, 
+            "easetype", iTween.EaseType.easeInOutSine
+            ));
     }
 }
