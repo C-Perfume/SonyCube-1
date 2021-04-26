@@ -15,9 +15,7 @@ public class Coin_MoveZ : MonoBehaviour
     bool backM = true;
     bool spin = false;
    
-    void Start()
-    { Destroy(gameObject, 13); }
-    void Update()
+     void Update()
     {
         if (backM)
         {
@@ -49,27 +47,16 @@ public class Coin_MoveZ : MonoBehaviour
             }
             else if (currTime > time)
             {
-                movable = false;
                 currTime = 0;
                 moveCnt++;
             }
         }
-        else
-        {
-            currTime += Time.deltaTime;
-
-            if (currTime > stayTime)
-            {
-                movable = true;
-                currTime = 0;
-            }
-        }
-
+        StartCoroutine(ActiveFalse());
     }
-    private void OnCollisionEnter(Collision collision)
+    IEnumerator ActiveFalse()
     {
-        GameObject pl = GameObject.Find("Player");
-        if (pl == collision.gameObject)
-        { Destroy(gameObject); }
+        yield return new WaitForSeconds(13);
+        gameObject.SetActive(false);
+        GameObject.Find("2 CoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject);
     }
 }

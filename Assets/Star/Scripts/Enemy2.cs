@@ -10,12 +10,7 @@ public class Enemy2 : MonoBehaviour
     float currT=0;
     bool isDrop = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Destroy(gameObject, destroyT);
-    }
-    private void Update()
+        private void Update()
     {
         if (isDrop)
         {
@@ -30,6 +25,13 @@ public class Enemy2 : MonoBehaviour
 
         if (currT >= stayT) transform.position += transform.up * speed * Time.deltaTime;
 
+        StartCoroutine(ActiveFalse());
+    }
+    IEnumerator ActiveFalse()
+    {
+        yield return new WaitForSeconds(destroyT);
+        gameObject.SetActive(false);
+        GameObject.Find("E2 Spawner").GetComponent<Enemy2Man>().enemyFool.Add(gameObject);
     }
 
 }

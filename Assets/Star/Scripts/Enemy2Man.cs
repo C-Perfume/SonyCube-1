@@ -4,48 +4,64 @@ using UnityEngine;
 
 public class Enemy2Man : MonoBehaviour
 {
-    public GameObject EnemyFactoryX;
-    public GameObject EnemyFactoryZ;
+    public GameObject enemyFactoryX;
+    public GameObject enemyFactoryZ;
+
     float spawnSpeed;
-    public int ranTimeMinU = 3;
-    public int ranTimeMaxU = 8;
     public int ranTimeMin = 5;
     public int ranTimeMax = 10;
-    float currentTime;
+    float currentTime = 0;
     public int ranCnt = 9;
     int ran;
     public int childLength = 0;
-    // Start is called before the first frame update
 
-    void Start()
+    public List<GameObject> enemyFool = new List<GameObject>();
+    public int poolSize = 3;
+    GameObject enemy;
+
+    private void OnEnable()
     {
         spawnSpeed = Random.Range(ranTimeMin, ranTimeMax);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        currentTime += Time.deltaTime;
-        if (spawnSpeed < currentTime)
+
+        for (int i = 0; i < poolSize; i++)
         {
             ran = Random.Range(0, childLength);
             Spawn();
-            currentTime = 0;
-            //시간 초기화
-            spawnSpeed = Random.Range(ranTimeMinU, ranTimeMaxU);
-            //랜덤한 시간에 생성
-
+            enemyFool.Add(enemy);
+            enemy.SetActive(false);
         }
     }
+
+    void Update()
+    {
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        { return; }
+
+        currentTime += Time.deltaTime;
+
+        if (currentTime > spawnSpeed)
+        {
+            if (enemyFool.Count > 0)
+            {
+                enemyFool.Remove(enemyFool[0]);
+                enemyFool[0].SetActive(true);
+               }
+             currentTime = 0;
+            spawnSpeed = Random.Range(ranTimeMin, ranTimeMax);
+          
+        }
+        
+    } 
     void Spawn()
     {
         if (ran >= ranCnt)
         {
-            GameObject enemy = Instantiate(EnemyFactoryX);
+            enemy = Instantiate(enemyFactoryX);
             enemy.transform.position = transform.GetChild(ran).position;
         }
         else
         {
-            GameObject enemy = Instantiate(EnemyFactoryZ);
+            enemy = Instantiate(enemyFactoryZ);
             enemy.transform.position = transform.GetChild(ran).position;
         }
 

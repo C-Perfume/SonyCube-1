@@ -21,24 +21,24 @@ public class Enemy3 : MonoBehaviour
     public int findCnt = 5;
     void Start()
     {
-       
         move1 = Enemy3move.StayT;
         StartCoroutine(StayT());
-        Invoke("DestroyObject", destroyT); 
         target = GameObject.Find("PlayersEmpty");
         originDir = target.transform.position - transform.position;
         originDir.Normalize();
     }
-    void DestroyObject() { Destroy(gameObject); }
-    private void OnTriggerEnter(Collider other)
+      private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.name.Contains("Ene"))
+        if (other.gameObject.name.Contains("Las"))
         {
-            Destroy(other.gameObject);
+            gameObject.SetActive(false);
         }
     }
     void Update()
     {
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        { return; }
+
         if (transform.position.y > 1)
         { transform.position += Vector3.down * Time.deltaTime; }
         else
@@ -59,6 +59,14 @@ public class Enemy3 : MonoBehaviour
 
         }
 
+
+        StartCoroutine(ActiveFalse());
+    }
+    IEnumerator ActiveFalse()
+    {
+        yield return new WaitForSeconds(destroyT);
+        gameObject.SetActive(false);
+       GameObject.Find("E3 Spawner").GetComponent<Enemy2Man>().enemyFool.Add(gameObject); 
     }
 
     void Move()
