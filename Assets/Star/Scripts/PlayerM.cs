@@ -24,20 +24,22 @@ public class PlayerM : MonoBehaviour
 
         goBG = GameObject.Find("Canvas/GameOverBG");
         stageBGM = GameObject.Find("StageBG").GetComponent<AudioSource>();
-        goBG.SetActive(false);
+        if (goBG!=null) { goBG.SetActive(false); }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.name.Contains("Coin") && !other.gameObject.name.Contains("RoC"))
         {
-            goBG.SetActive(true);
-            stageBGM.Pause();
+            if (goBG != null) { goBG.SetActive(true); stageBGM.Pause();}
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        { return; }
+
         if (mCunt == 0)
         {
             currTime += Time.deltaTime;

@@ -15,6 +15,9 @@ public class StageBGMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.gState != GameManager.GameState.Play) 
+        { return; }
+            
         currT += Time.deltaTime;
         if (currT >= stayT)
         { shrink(); }

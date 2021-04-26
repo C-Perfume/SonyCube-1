@@ -11,12 +11,18 @@ public class SpawnBlockEnemy : MonoBehaviour
     int ran;
     void Start()
     {
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        { return; }
+
         EnemyManagement.Enm1SpawnEnable = true;
         SpawnSpeed = Random.Range(1f, 4f); //초기 랜덤지정
     }
 
     void Update()
     {
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        { return; }
+
         currentTime += Time.deltaTime;
         if (SpawnSpeed < currentTime)
         {

@@ -15,16 +15,14 @@ public class Enemy2Fire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-                GameObject dZ = Instantiate(dangerZF); 
+              GameObject dZ = Instantiate(dangerZF); 
                 dZ.transform.position = new Vector3(transform.position.x, dZonePosition, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //한번만 나가게 하고 싶은데.. 스타트에서는 안된다
-        
-        realTime += Time.deltaTime;
+               realTime += Time.deltaTime;
 
         if (laserA)
         {

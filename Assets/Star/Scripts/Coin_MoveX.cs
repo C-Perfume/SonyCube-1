@@ -15,8 +15,6 @@ public class Coin_MoveX : MonoBehaviour
     bool rightM = true;
     bool spin = false;
 
-    void Start()
-    { Destroy(gameObject, 13); }
     void Update()
     {
         if (rightM)
@@ -47,38 +45,16 @@ public class Coin_MoveX : MonoBehaviour
                 transform.position -= transform.up * Time.deltaTime;
             }
             else if (currTime > time)
-            {
-                movable = false;
-                currTime = 0;
+            {              
                 moveCnt++;
-            }
-        }
-        else
-        {
-            currTime += Time.deltaTime;
-
-            if (currTime > stayTime)
-            {
-                movable = true;
                 currTime = 0;
             }
         }
+        StartCoroutine(ActiveFalse());
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        GameObject pl = GameObject.Find("Player");
-        if (pl == collision.gameObject)
-        { Destroy(gameObject); }
+    IEnumerator ActiveFalse()
+    { yield return new WaitForSeconds(13);
+        gameObject.SetActive(false);
+        GameObject.Find("2 CoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject);
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    //스폰이 포함된 충돌체가 있다면
-    //    if (collision.gameObject.name.Contains("Spawn"))
-    //    {// Rigidbody 컴포넌트를 가져와서 
-    //        Rigidbody rb = GetComponent<Rigidbody>();
-    //        //회전을 잠근다.
-    //        rb.constraints = RigidbodyConstraints.None;
-    //    }
-    //}
-}
+    }
