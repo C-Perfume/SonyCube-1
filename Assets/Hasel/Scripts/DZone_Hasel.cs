@@ -6,7 +6,7 @@ public class DZone_Hasel : MonoBehaviour
 {
     float destroyT = 1f;
     float scaleT = 2f; 
-    public float scaleSize = 0.99f;
+    float scaleSize = 0.99f;
     bool scale = true;
     float scaleCut = 0;
 
