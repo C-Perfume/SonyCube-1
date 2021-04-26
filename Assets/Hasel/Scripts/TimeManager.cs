@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
-    public Text TimeText;
     public Text CurrentScoreUI;
     public Text BestScoreUI;
     float Sec;
@@ -32,7 +31,7 @@ public class TimeManager : MonoBehaviour
         Sec += Time.deltaTime;
         currScore += Time.deltaTime;
         CurrentScoreUI.text = "현재 점수 : " + Mathf.Round(currScore).ToString();
-        TimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", Hour, Min, (int)Sec);        
+        //TimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", Hour, Min, (int)Sec);        
 
         if ((int)Sec > 59)
         {
