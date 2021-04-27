@@ -9,9 +9,7 @@ public class SceneManagerA : MonoBehaviour
     public void OnClickRetry()
     {
         SceneManager.LoadScene("PlayerScene");
-        GameManager.instance.gState = GameManager.GameState.Ready;
-        GameManager.instance.Ready();
-    }
+           }
 
     public void OnClickStart()
     {

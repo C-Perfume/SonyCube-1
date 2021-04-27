@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Star/Scenes/PlayerSelection.unity
+    path: Assets/Star/Scenes/Intro Scene.unity
+    guid: 1750b60efed59fa46ba8e91671735e0e
+  - enabled: 1
+    path: Assets/Star/Scenes/PlayerSelection/PlayerSelection.unity
     guid: 59aec63cac1be4949a5e53cfc342b795
   - enabled: 1
-    path: Assets/Star/Scenes/PlayerScene.unity
+    path: Assets/Star/Scenes/PlayerScene/PlayerScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

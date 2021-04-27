@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class IntroText : MonoBehaviour
 {
     public Image img;
+    public Text skip;
     Color color;
+    Color skColor;
     public int changeSpd;
     float currT;
     public float changeT = 4.5f;
@@ -16,6 +19,10 @@ public class IntroText : MonoBehaviour
     private void Start()
     {
         color = img.color;
+        skColor = skip.color;
+        skColor.a = 0;
+        skip.color = skColor;
+
     }
     void Update()
     {
@@ -23,25 +30,25 @@ public class IntroText : MonoBehaviour
         {
             iTween.MoveTo(targets[0].gameObject,
                     iTween.Hash(
-                        "position", new Vector3(-1234 + 1280, 442 + 720, 0),
+                        "position", new Vector3(-559+960 , 255+540, 0),
                         "Time", 1,
                         "easetype", iTween.EaseType.easeOutBack
-                         ));
+                         ));    
 
             iTween.MoveTo(targets[1].gameObject,
                       iTween.Hash(
-                          "position", new Vector3(-294.9996f + 1280, 166.9997f + 720, 0),
+                          "position", new Vector3(-265 + 960, 154 + 540, 0),
                           "Time", 1));
 
             iTween.MoveTo(targets[2].gameObject,
                      iTween.Hash(
-                        "position", new Vector3(254.9993f + 1280, -192.0996f + 720, 0),
+                        "position", new Vector3(289 + 960, -205 + 540, 0),
                          "Time", 1));
 
             iTween.MoveTo(targets[3].gameObject,
                     iTween.Hash(
                         "delay", 1,
-                        "position", new Vector3(1926 + 1280, -622 + 720, 0),
+                        "position", new Vector3(607 + 960, -286 + 540, 0),
                         "Time", 1,
                         "easetype", iTween.EaseType.easeOutBack
                         )); ;
@@ -63,38 +70,45 @@ public class IntroText : MonoBehaviour
             {
                 iTween.MoveTo(targets[i].gameObject,
                        iTween.Hash(
-                           "delay", 5+(i*0.3),
-                           "position", new Vector3(-3749+1280, 1116+720),
+                           "delay", 5 + (i * 0.3),
+                           "position", new Vector3(-2731 + 960, 837 + 540),
                            "Time", 3
                            ));
             }
             iTween.MoveTo(targets[2].gameObject,
                          iTween.Hash(
                              "delay", 5.3,
-                             "position", new Vector3(4166 + 1280, -1223 + 720),
+                             "position", new Vector3(2001 + 960, -664 + 540),
                              "Time", 3
                              ));
             iTween.MoveTo(targets[3].gameObject,
                        iTween.Hash(
                            "delay", 5,
-                           "position", new Vector3(4166 + 1280, -1223 + 720),
+                           "position", new Vector3(2344 + 960, -751 + 540),
                            "Time", 3
-                           )); 
-            
+                           ));
+
             next++;
-           
+            
         }
         if (next == 2)
         { currT += Time.deltaTime;
+           
             if (currT >= changeT)
-            {
-                color.a -= 0.01f * changeSpd * Time.deltaTime;
+            {    color.a -= 0.01f * changeSpd * Time.deltaTime;
                 if (color.a <= 0.7) { color.a -= 0.01f * changeSpd*2 * Time.deltaTime; }
                 if (color.a <= 0.3) { color.a = 0; }
                 img.color = color;
-             }
+            
+            skColor.a += 0.01f * 30 * Time.deltaTime;
+            skip.color = skColor;
+            }
             
         }
 
+    }
+   public void SkipBtn()
+    {
+        SceneManager.LoadScene("PlayerSelection");
     }
 }

@@ -9,8 +9,19 @@ public class Enemy2 : MonoBehaviour
     public float stayT = 3;
     float currT=0;
     bool isDrop = true;
+    public int rand;
 
-        private void Update()
+    private void OnEnable()
+    {
+        StartCoroutine(ActiveFalse());
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    private void Update()
     {
         if (isDrop)
         {
@@ -25,13 +36,20 @@ public class Enemy2 : MonoBehaviour
 
         if (currT >= stayT) transform.position += transform.up * speed * Time.deltaTime;
 
-        StartCoroutine(ActiveFalse());
+        //StartCoroutine(ActiveFalse());
     }
     IEnumerator ActiveFalse()
     {
         yield return new WaitForSeconds(destroyT);
+        Deactive();
+    }
+
+    public void Deactive()
+    {
         gameObject.SetActive(false);
-        GameObject.Find("E2 Spawner").GetComponent<Enemy2Man>().enemyFool.Add(gameObject);
+        isDrop = true;
+        currT = 0;
+        GameObject.Find("E2 Spawner").GetComponent<Enemy2Man>().ResetPosition(gameObject);
     }
 
 }

@@ -13,13 +13,13 @@ public class PlayerM : MonoBehaviour
     public float extraTime = 2;
     bool m = true;
     int mCunt = 0;
-    // Start is called before the first frame update
+    
     public GameObject goBG;
     AudioSource stageBGM;
     void Start()
     {
         // ¸ðµ¨¼±ÅÃ
-        int selectedModel = GameManager.instance.selectedPlayer;
+        int selectedModel = GameMan.instance.selectedPlayer;
         playerModels[selectedModel].SetActive(true);
 
         goBG = GameObject.Find("Canvas/GameOverBG");

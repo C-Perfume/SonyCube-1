@@ -34,8 +34,14 @@ public class Coin_OnTrigger : MonoBehaviour
         yield return new WaitForSeconds(3);
         gameObject.SetActive(false);
         if (gameObject.name.Contains("Red")) 
-        { GameObject.Find("1 RedCoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject); }
-        else { GameObject.Find("2 CoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject); }
+        {
+            GameObject.Find("E2 Spawner").GetComponent<Enemy2Man>().AllDeactive();
+            //GameObject.Find("1 RedCoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject); 
+        }
+        else 
+        {
+            //GameObject.Find("2 CoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject); 
+        }
     }
 
 }
