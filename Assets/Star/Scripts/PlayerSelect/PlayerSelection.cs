@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerSelection : MonoBehaviour
 {
-
     public RaycastHit hit;
     public GameObject player;
 
@@ -21,9 +20,8 @@ public class PlayerSelection : MonoBehaviour
             if (hit.transform.gameObject.name.Contains("BG") != true)
             {
                 player = hit.transform.gameObject;
-                print(player.name);
                 // player 선택 숫자값 변경
-                GameManager.instance.selectedPlayer = int.Parse(player.name);
+                GameMan.instance.selectedPlayer = int.Parse(player.name);
             }
         }
     }

@@ -16,22 +16,23 @@ public class Enemy2Man : MonoBehaviour
     public int childLength = 0;
 
     public List<GameObject> enemyFool = new List<GameObject>();
+    public List<GameObject> activenemy = new List<GameObject>();
     public int poolSize = 3;
-    GameObject enemy;
 
-    private void OnEnable()
+
+    private void Start()
     {
         spawnSpeed = Random.Range(ranTimeMin, ranTimeMax);
 
         for (int i = 0; i < poolSize; i++)
         {
             ran = Random.Range(0, childLength);
-            Spawn();
-            enemyFool.Add(enemy);
+            GameObject enemy = Spawn();
+            ResetPosition(enemy);
+;          
             enemy.SetActive(false);
         }
     }
-
     void Update()
     {
         if (GameManager.instance.gState != GameManager.GameState.Play)
@@ -43,27 +44,61 @@ public class Enemy2Man : MonoBehaviour
         {
             if (enemyFool.Count > 0)
             {
-                enemyFool.Remove(enemyFool[0]);
                 enemyFool[0].SetActive(true);
-               }
+                activenemy.Add(enemyFool[0]);
+                enemyFool.Remove(enemyFool[0]);
+            }
+            
              currentTime = 0;
             spawnSpeed = Random.Range(ranTimeMin, ranTimeMax);
           
         }
         
     } 
-    void Spawn()
+    GameObject Spawn()
     {
+        GameObject enemy = null;
         if (ran >= ranCnt)
         {
             enemy = Instantiate(enemyFactoryX);
-            enemy.transform.position = transform.GetChild(ran).position;
+            enemy.GetComponent<Enemy2>().rand = 18;
+            //enemy.transform.position = transform.GetChild(ran).position;
         }
         else
         {
             enemy = Instantiate(enemyFactoryZ);
-            enemy.transform.position = transform.GetChild(ran).position;
+            enemy.GetComponent<Enemy2>().rand = 9;
+            //enemy.transform.position = transform.GetChild(ran).position;
         }
+        return enemy;
+    }
 
+    public void ResetPosition(GameObject go)
+    {
+        activenemy.Remove(go);
+        enemyFool.Add(go);
+        int rand = go.GetComponent<Enemy2>().rand;
+        int ran;
+        if(rand == 9)
+        {
+            ran = Random.Range(0, 9);
+            go.transform.position = transform.GetChild(ran).position;
+        }
+        else
+        {
+            ran = Random.Range(9, 18);
+            go.transform.position = transform.GetChild(ran).position;
+
+        }
+    }
+
+    public void AllDeactive()
+    {
+        Enemy2 enemy;
+        for(int i = 0; i < activenemy.Count; i++)
+        {
+            enemy = activenemy[i].GetComponent<Enemy2>();
+            enemy.Deactive();
+        }
     }
 }
