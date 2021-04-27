@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageBGMove : MonoBehaviour
+public class StageBG_Move : MonoBehaviour
 {
      float currT = 0;
     public int stayT = 3;

@@ -4,36 +4,47 @@ using UnityEngine;
 
 public class Enemy3 : MonoBehaviour
 {
-    enum Enemy3move
-    {
-        Stay,
-        Move,
-        StayT
-    }
-    Enemy3move move1;
-
     GameObject target;
     public float destroyT = 10;
     public float stayT = 4;
-    int i = 0;
+    public float waitT = 1;
+    float currT = 0;
     Vector3 dir;
-    Vector3 originDir;
+     Vector3 originDir;
     public int findCnt = 5;
+    int i = 0;
+    bool istrue = true;
+    private void OnEnable()
+    {
+        StartCoroutine(ActiveFalse());
+    }
+
+    IEnumerator ActiveFalse()
+    {
+        yield return new WaitForSeconds(destroyT);
+        Deactive();
+    }
+
+    public void Deactive()
+    {
+        gameObject.SetActive(false);
+        GameObject.Find("E3 Spawner").GetComponent<Enemy3Man>().ResetPosition(gameObject);
+    }
+    private void OnDisable()
+    {
+        StopCoroutine(ActiveFalse());
+    }
+
     void Start()
     {
-        move1 = Enemy3move.StayT;
         StartCoroutine(StayT());
         target = GameObject.Find("PlayersEmpty");
-        originDir = target.transform.position - transform.position;
-        originDir.Normalize();
     }
-      private void OnTriggerEnter(Collider other)
+    IEnumerator StayT()
     {
-        if (other.gameObject.name.Contains("Las"))
-        {
-            gameObject.SetActive(false);
-        }
+        yield return new WaitForSeconds(stayT);
     }
+
     void Update()
     {
         if (GameManager.instance.gState != GameManager.GameState.Play)
@@ -44,35 +55,31 @@ public class Enemy3 : MonoBehaviour
         else
         {
             transform.position = new Vector3(transform.position.x, 1, transform.position.z);
-            switch (move1)
-            {
-                case Enemy3move.Move:
-                    Move();
-                    break;
-                case Enemy3move.Stay:
-                    Stay();
-                    break;
-                case Enemy3move.StayT:
-                    StayT();
-                    break;
-            }
+            currT += Time.deltaTime;
 
+            if (currT > waitT)
+            {
+                if (istrue)
+                {
+                    originDir = target.transform.position - transform.position;
+                    originDir.Normalize();
+                }
+                currT = 0; i++; istrue = false; Move();
+                if (i == findCnt)
+                {
+                    originDir = target.transform.position - transform.position;
+                    originDir.Normalize();
+                    i = 0; istrue = true;
+                }
+            }
         }
 
-
-        StartCoroutine(ActiveFalse());
-    }
-    IEnumerator ActiveFalse()
-    {
-        yield return new WaitForSeconds(destroyT);
-        gameObject.SetActive(false);
-       GameObject.Find("E3 Spawner").GetComponent<Enemy2Man>().enemyFool.Add(gameObject); 
     }
 
     void Move()
     {
         if (target != null)
-        {   
+        {
             dir = originDir;
             float dist = Vector3.Distance(transform.position, target.transform.position);
             //transform.position += dir * Time.deltaTime;
@@ -80,7 +87,7 @@ public class Enemy3 : MonoBehaviour
             if (dist <= 0.1) { transform.position = target.transform.position; }
             else if (dir.x >= 0 && dir.z >= 0)
             {
-               
+
                 if (dir.x > dir.z)
                 {
                     transform.position += Vector3.right;
@@ -132,27 +139,14 @@ public class Enemy3 : MonoBehaviour
                 }
             }
         }
-        move1 = Enemy3move.Stay;
-        StartCoroutine(Stay());
+
     }
-    IEnumerator Stay()
+    private void OnTriggerEnter(Collider other)
     {
-        yield return new WaitForSeconds(1);
-        i++;
-        move1 = Enemy3move.Move;
-        if (i == findCnt)
+        if (other.gameObject.name.Contains("Las"))
         {
-            originDir = target.transform.position - transform.position;
-            originDir.Normalize();
-            i = 0;
+            currT = 0;
+            Deactive();
         }
-        
     }
-
-    IEnumerator StayT()
-    {
-        yield return new WaitForSeconds(stayT);
-        move1 = Enemy3move.Move;
-    }
-
 }

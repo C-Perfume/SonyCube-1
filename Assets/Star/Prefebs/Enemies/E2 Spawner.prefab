@@ -511,14 +511,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd93d6ee1e993040ae5352eb23ddd4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyFactoryX: {fileID: 7615630939825442079, guid: 2a07921ec891f69469243dd19b6ed505, type: 3}
-  EnemyFactoryZ: {fileID: 7615630939825442079, guid: 70c0e72274ada304289c21e6203bf4de, type: 3}
-  ranTimeMinU: 3
-  ranTimeMaxU: 8
-  ranTimeMin: 6
-  ranTimeMax: 8
+  enemyFactoryX: {fileID: 7615630939825442079, guid: 2a07921ec891f69469243dd19b6ed505, type: 3}
+  enemyFactoryZ: {fileID: 7615630939825442079, guid: 70c0e72274ada304289c21e6203bf4de, type: 3}
+  ranTimeMin: 5
+  ranTimeMax: 5
   ranCnt: 9
   childLength: 18
+  enemyFool: []
+  activenemy: []
+  poolSize: 2
 --- !u!1 &6174308264961745561
 GameObject:
   m_ObjectHideFlags: 0

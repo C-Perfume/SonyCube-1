@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int selectedPlayer;
+   
 
     private void Awake()
     {
@@ -29,15 +29,17 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState gState;
-    public GameObject gameOption;
+    public GameObject gameOptionBG;
     public GameObject readyA;
     public GameObject go;
     PlayerM pM;
+    AudioSource stageBGM;
     private void Start()
     {
-        gState = GameState.Ready; Ready();
+        gState = GameState.Ready; 
+        Ready();
         pM = GameObject.Find("PlayersEmpty").GetComponent<PlayerM>();
-
+        stageBGM = GameObject.Find("StageBG").GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(ReadyToGo());
         go.SetActive(false);
-        gameOption.SetActive(false);
+        gameOptionBG.SetActive(false);
     }
     IEnumerator ReadyToGo()
     {
@@ -62,26 +64,23 @@ public class GameManager : MonoBehaviour
     }
     public void PauseOption()
     {
-        if (GameManager.instance.gState != GameManager.GameState.Play && GameManager.instance.gState != GameManager.GameState.Tutorial)
-        { return; }
-
-        gameOption.SetActive(true);
+        gameOptionBG.SetActive(true);
         Time.timeScale = 0;
-
+        stageBGM.Pause();
         gState = GameState.Pause;
-        //왜 소리는 안멈추는 거지?
+        //왜 소리는 안멈추는 거지? 원래 따로 멈추고 다시 rezoom해야 된다고 함
 
     }
     public void PlayOption()
     {
-        gameOption.SetActive(false);
+        gameOptionBG.SetActive(false);
         Time.timeScale = 1;
+        stageBGM.UnPause();
         gState = GameState.Play;
     }
     public void RetryOption()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
     }
     public void EndOption()
     {

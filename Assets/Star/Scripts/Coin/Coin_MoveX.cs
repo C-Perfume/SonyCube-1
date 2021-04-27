@@ -14,7 +14,12 @@ public class Coin_MoveX : MonoBehaviour
     public float SpinSpd = 3f;
     bool rightM = true;
     bool spin = false;
+    public float destroyT = 13;
 
+    private void OnEnable()
+    {
+        StartCoroutine(ActiveFalse());
+    }
     void Update()
     {
         if (rightM)
@@ -50,11 +55,17 @@ public class Coin_MoveX : MonoBehaviour
                 currTime = 0;
             }
         }
-        StartCoroutine(ActiveFalse());
+        
     }
     IEnumerator ActiveFalse()
-    { yield return new WaitForSeconds(13);
+    { yield return new WaitForSeconds(destroyT);
+        Deactive();
+    }
+    public void Deactive()
+    {
         gameObject.SetActive(false);
-        GameObject.Find("2 CoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject);
+        currTime = 0;
+        moveCnt = 0;
+        GameObject.Find("2 CoinPoints").GetComponent<CoinMan>().ResetPosition(gameObject);
     }
-    }
+}

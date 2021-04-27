@@ -36,8 +36,7 @@ public class Enemy2 : MonoBehaviour
 
         if (currT >= stayT) transform.position += transform.up * speed * Time.deltaTime;
 
-        //StartCoroutine(ActiveFalse());
-    }
+      }
     IEnumerator ActiveFalse()
     {
         yield return new WaitForSeconds(destroyT);
