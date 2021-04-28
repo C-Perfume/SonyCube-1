@@ -32,6 +32,8 @@ public class Coin_OnTrigger : MonoBehaviour
                 if (e3 != null) { GameObject.Find("E3 Spawner").GetComponent<Enemy3Man>().AllDeactive(); }
                 GameObject e2 = GameObject.Find("E2 Spawner");
                 if (e2 != null) { GameObject.Find("E2 Spawner").GetComponent<Enemy2Man>().AllDeactive(); }
+                GameObject e1 = GameObject.Find("E1 Spawner");
+                if (e1 != null) { GameObject.Find("E1 Spawner").GetComponent<SpawnBlockEnemy>().AllDeactive(); }
             }
 
             StartCoroutine(dieCoin());

@@ -9,7 +9,7 @@ public class Enemy2Fire : MonoBehaviour
     public GameObject laserF;
         int laserCnt=0;
     bool laserA = true;
-    float spawnSpd = 0;
+    //float spawnSpd = 0;
     public GameObject dangerZF;
     public float dZonePosition = -0.3f;
     // Start is called before the first frame update

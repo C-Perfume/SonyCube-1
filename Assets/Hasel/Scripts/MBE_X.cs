@@ -14,7 +14,7 @@ public class MBE_X : MonoBehaviour
     float dZoneCnt = 0;
     bool dz = false;
 
-    private void Start()
+    private void OnEnable()
     {
         WakeUp();
     }
@@ -22,7 +22,12 @@ public class MBE_X : MonoBehaviour
 
     void WakeUp()
     {
-        iTween.MoveTo(gameObject, iTween.Hash("x", -5, "y", 1, "time", jumpT, "easeType", iTween.EaseType.easeOutCirc, "oncomplete", "DzFire", "oncompletetarget", this.gameObject));
+        iTween.MoveTo(gameObject, iTween.Hash
+            ("x", -5, "y", 1, 
+            "time", jumpT, 
+            "easeType", iTween.EaseType.easeOutCirc, 
+            "oncomplete", "DzFire",
+            "oncompletetarget", this.gameObject));
     }
     void Moving()
     {
@@ -33,7 +38,13 @@ public class MBE_X : MonoBehaviour
         }
         else if (gameObject.transform.position.x <= 5)
         {
-            Destroy(gameObject, movT + 1.5f);
+            float currT = 0;
+            currT += Time.deltaTime;
+            if (currT > movT + 1.5f)
+            {
+                gameObject.SetActive(false);
+                GameObject.Find("E1 Spawner").GetComponent<SpawnBlockEnemy>().ResetPosition(gameObject); currT = 0;
+            }
             iTween.MoveTo(gameObject, iTween.Hash("x", 8, "y", -4, "time", movT + 2, "easeType", iTween.EaseType.easeOutCirc));
         }
     }
@@ -65,6 +76,10 @@ public class MBE_X : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 7)
+        {
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.name.Contains("Player"))
         {
             Destroy(other.gameObject);
         }

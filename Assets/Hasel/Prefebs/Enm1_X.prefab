@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3681377963836694515}
   - component: {fileID: 1226640374568381358}
   - component: {fileID: 5417319036991803387}
+  - component: {fileID: 1606374367099382594}
   m_Layer: 8
   m_Name: Enm1_X
   m_TagString: Untagged
@@ -63,6 +64,19 @@ MonoBehaviour:
   spawnPoint: {fileID: 8568750554090228639}
   movT: 1.5
   delayT: 1
+  rand: 0
+--- !u!114 &1606374367099382594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681377963836694517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a66867ff657044cbaf546fb790a82a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8568750554090228639
 GameObject:
   m_ObjectHideFlags: 0

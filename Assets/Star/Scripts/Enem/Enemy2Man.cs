@@ -7,7 +7,7 @@ public class Enemy2Man : MonoBehaviour
     public GameObject enemyFactoryX;
     public GameObject enemyFactoryZ;
 
-    public float spawnSpeed;
+    public float spawnSpeed = 3;
     public int ranTimeMin = 5;
     public int ranTimeMax = 10;
     float currentTime = 0;
