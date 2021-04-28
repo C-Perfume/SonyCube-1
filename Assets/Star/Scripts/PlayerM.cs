@@ -33,9 +33,7 @@ public class PlayerM : MonoBehaviour
             if (goBG != null) { goBG.SetActive(true); stageBGM.Pause();}
         }
     }
-
-    // Update is called once per frame
-    void Update()
+     void Update()
     {
         if (GameManager.instance.gState != GameManager.GameState.Play)
         { return; }

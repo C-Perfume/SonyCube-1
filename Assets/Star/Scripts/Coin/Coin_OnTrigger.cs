@@ -7,7 +7,7 @@ public class Coin_OnTrigger : MonoBehaviour
     GameObject eft;
     GameObject eft_1;
     AudioSource coinAudio;
-    public int rand;
+    public float destroyT = 13;
     private void Start()
     {
         coinAudio = gameObject.GetComponent<AudioSource>();
@@ -34,15 +34,15 @@ public class Coin_OnTrigger : MonoBehaviour
                 if (e2 != null) { GameObject.Find("E2 Spawner").GetComponent<Enemy2Man>().AllDeactive(); }
             }
 
-            StartCoroutine(ActiveFalse());
+            StartCoroutine(dieCoin());
         } 
         
            
     }
-    IEnumerator ActiveFalse()
+    IEnumerator dieCoin()
     {
         yield return new WaitForSeconds(3);
-        gameObject.SetActive(false);
+        Destroy(gameObject, destroyT);
     }
 
 }

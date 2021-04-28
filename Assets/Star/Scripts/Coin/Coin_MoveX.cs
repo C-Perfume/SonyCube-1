@@ -16,10 +16,9 @@ public class Coin_MoveX : MonoBehaviour
     bool spin = false;
     public float destroyT = 13;
 
-    private void OnEnable()
-    {
-        StartCoroutine(ActiveFalse());
-    }
+    void Start()
+    { Destroy(gameObject, destroyT); }
+
     void Update()
     {
         if (rightM)
@@ -57,15 +56,5 @@ public class Coin_MoveX : MonoBehaviour
         }
         
     }
-    IEnumerator ActiveFalse()
-    { yield return new WaitForSeconds(destroyT);
-        Deactive();
-    }
-    public void Deactive()
-    {
-        gameObject.SetActive(false);
-        currTime = 0;
-        moveCnt = 0;
-        GameObject.Find("2 CoinPoints").GetComponent<CoinMan>().ResetPosition(gameObject);
-    }
+   
 }
