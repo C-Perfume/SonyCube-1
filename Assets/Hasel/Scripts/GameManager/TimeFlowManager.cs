@@ -11,13 +11,17 @@ public class TimeFlowManager : MonoBehaviour
     int Min;
     int Hour;
 
+    private void Awake()
+    {
+        currTime.text = ("");
+    }
     private void Start()
     {
-        Sec = 55;
+        Sec = 0;
     }
     private void Update()
     {
-        //if (GameManager.instance.gState != GameManager.GameState.Play) { return; }
+        if (GameManager.instance.gState != GameManager.GameState.Play) { return; }
         TimeFlow();
     }
 

@@ -25,18 +25,26 @@ public class CSmanager : MonoBehaviour
     private void Start()
     {
         SetBestCoin(PlayerPrefs.GetInt("BC"));
+        currCoin = 0;
+        CurrCounUi.text = ("");
     }
 
     public void AddCoin(int addValue)
     {
-        bestCoin+=addValue; //Coin 증가
-        SetBestCoin(bestCoin);
-        PlayerPrefs.SetInt("BC", bestCoin); //코인 저장
+        currCoin++;
+        CurrCounUi.text = currCoin.ToString();
+
+        if (currCoin > bestCoin)
+        {
+            SetBestCoin(currCoin);
+            //베스트 점수 저장
+            PlayerPrefs.SetInt("BC", bestCoin);
+        }
     }
 
     void SetBestCoin(int BC)
     {
         bestCoin = BC; //현재 코인량 갱신        
-        BestCoinUI.text = (BC.ToString()); //코인 UI 갱신s
+        BestCoinUI.text = (BC.ToString()); //코인 UI 갱신
     }
 }

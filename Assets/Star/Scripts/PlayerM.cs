@@ -30,14 +30,18 @@ public class PlayerM : MonoBehaviour
     {
         if (!other.gameObject.name.Contains("Coin") && !other.gameObject.name.Contains("RoC"))
         {
-            if (goBG != null) { goBG.SetActive(true); stageBGM.Pause(); }
+            if (goBG != null)
+            {
+                GameManager.instance.gState = GameManager.GameState.Ready;
+                goBG.SetActive(true); stageBGM.Pause();
+            }
         }
     }
     void Update()
     {
         if (GameManager.instance.gState != GameManager.GameState.Play)
-        { 
-            return; 
+        {
+            return;
         }
 
         if (mCunt == 0)
