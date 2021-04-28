@@ -9,8 +9,10 @@ public class CSmanager : MonoBehaviour
     public static CSmanager instance;
 
     //베스트 점수
+    int currCoin;
     int bestCoin;
     //베스트 점수 UI(TEXT)
+    public Text CurrCounUi;
     public Text BestCoinUI;
 
     //Start보다 Awake가 먼저 호출됨
@@ -20,11 +22,9 @@ public class CSmanager : MonoBehaviour
         instance = this;//this = 자기자신을 뜻함
     }
 
-
     private void Start()
     {
         SetBestCoin(PlayerPrefs.GetInt("BC"));
-
     }
 
     public void AddCoin(int addValue)

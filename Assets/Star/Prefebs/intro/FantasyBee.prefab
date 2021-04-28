@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 389794892800420431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a7fa220726fdcc4d8ab75927e50bdc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c773cb053daef64f83388a3fe907d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   beepath:
@@ -102,7 +102,6 @@ MonoBehaviour:
   - {fileID: 8576260465512241618, guid: cac18f3338ac57849ad9187bfc1481af, type: 3}
   - {fileID: 5630410191929754685, guid: d6d6b852368c64e4dafbdd628f3e8972, type: 3}
   beepath2:
-  - {fileID: 5630410191929754685, guid: d6d6b852368c64e4dafbdd628f3e8972, type: 3}
   - {fileID: 3170717223150119876, guid: 9584604a280b1954c804cc128c5a7372, type: 3}
   - {fileID: 2545518118720010931, guid: 0515f37e58ff9634aa2871acdea13262, type: 3}
   - {fileID: 4487689516499665300, guid: 4235dd44efc273743b04905a3deef9a0, type: 3}

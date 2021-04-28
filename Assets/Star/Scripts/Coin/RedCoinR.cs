@@ -11,9 +11,14 @@ public class RedCoinR : MonoBehaviour
     bool isDrop = true;
     float currT = 0;
     public GameObject redC;
-    
+
+    private void Start()
+    {
+        Destroy(gameObject, destroyT);
+    }
     void Update()
-    { if (redC != null) redC.transform.Rotate(0, 90 * spinSpd * Time.deltaTime, 0) ;
+    {
+        if (redC != null) redC.transform.Rotate(0, 90 * spinSpd * Time.deltaTime, 0);
 
         if (isDrop)
         {
@@ -28,13 +33,5 @@ public class RedCoinR : MonoBehaviour
 
         if (currT >= stayT) transform.position += transform.up * dropSpd * Time.deltaTime;
 
-
-        StartCoroutine(ActiveFalse());
-    }
-    IEnumerator ActiveFalse()
-    {
-        yield return new WaitForSeconds(destroyT);
-        gameObject.SetActive(false);
-        GameObject.Find("1 RedCoinPoints").GetComponent<Enemy2Man>().enemyFool.Add(gameObject);
     }
 }
