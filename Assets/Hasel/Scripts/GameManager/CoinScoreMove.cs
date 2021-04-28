@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinScoreMove : MonoBehaviour
 {
+    RectTransform rt1;
+
+    private void Start()
+    {
+        rt1 = GetComponent<RectTransform>();
+    }
     void Update()
     {
-        //if (GameManager.instance.gState != GameManager.GameState.Play) 
-        //{ 
-        //    transform.position = new Vector3 (1200,-300,0);
-        //}
-        //else
-        //{
-        //    transform.position = new Vector3(600, -100, 0);
-        //}
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        {
+            rt1.anchoredPosition = new Vector2(1200, -300);
+        }
+        else
+        {
+            rt1.anchoredPosition = new Vector2(600, -100);
+        }
     }
 }
