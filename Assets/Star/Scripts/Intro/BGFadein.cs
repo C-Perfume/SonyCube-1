@@ -12,7 +12,7 @@ public class BGFadein : MonoBehaviour
     public float speed = 3;
     //bool next = true;
     float currT = 0;
-       
+      
     void Start()
     {
         color = black.color;
