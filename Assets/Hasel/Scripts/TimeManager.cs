@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
+    public static TimeManager instance;
     public Text CurrentScoreUI;
     public Text BestScoreUI;
     float Sec;
