@@ -14,8 +14,9 @@ public class E_ScoreTotal : MonoBehaviour
     void Start()
     {
         PlayerPrefs.GetString(Total_Coin_Text.text);
-        Curr_Coin_Text.text = CoinScore.instance.CurrCounUi.text;
-        Total_Coin_Text.text = CoinScore.instance.BestCoinUI.text;
-        CurrentTime_Text.text = TimeManager.instance.CurrentScoreUI.text;
+        //bestScore = PlayerPrefs.GetInt("BestScore");
+        Curr_Coin_Text.text = CSmanager.instance.CurrCounUi.text;
+        Total_Coin_Text.text = CSmanager.instance.BestCoinUI.text;
+        CurrentTime_Text.text = TimeFlowManager.instance.currTime.text;
     }
 }

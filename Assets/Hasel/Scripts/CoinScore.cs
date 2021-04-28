@@ -8,12 +8,11 @@ public class CoinScore : MonoBehaviour
     //자기 자신의 인스턴스를 담는것, 자기 자신을 변수 선언
     public static CoinScore instance;
 
-    
-    public int bestCoin; //베스트 점수
-    public int currCoin; //현재 점수
-    
-    public Text BestCoinUI; //베스트 점수 UI(TEXT)
-    public Text CurrCounUi; //현재 점수 UI(TEXT)
+    //베스트 점수
+    int bestCoin;
+    //베스트 점수 UI(TEXT)
+    public Text BestCoinUI;
+    public Text CurrCoinUI;
 
     //Start보다 Awake가 먼저 호출됨
 
@@ -30,12 +29,12 @@ public class CoinScore : MonoBehaviour
 
     public void AddCoin(int addValue)
     {
-        currCoin += addValue; //Coin 증가
-        SetBestCoin(Random.Range(3,5));
+        bestCoin+=addValue; //Coin 증가
+        SetBestCoin(bestCoin);
         PlayerPrefs.SetInt("BC", bestCoin); //코인 저장
     }
 
-    public void SetBestCoin(int BC)
+    void SetBestCoin(int BC)
     {
         bestCoin = BC; //현재 코인량 갱신        
         BestCoinUI.text = BC.ToString(); //코인 UI 갱신

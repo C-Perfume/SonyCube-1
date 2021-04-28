@@ -13,7 +13,7 @@ public class PlayerM : MonoBehaviour
     public float extraTime = 2;
     bool m = true;
     int mCunt = 0;
-    
+
     public GameObject goBG;
     AudioSource stageBGM;
     void Start()
@@ -24,19 +24,21 @@ public class PlayerM : MonoBehaviour
 
         goBG = GameObject.Find("Canvas/GameOverBG");
         stageBGM = GameObject.Find("StageBG").GetComponent<AudioSource>();
-        if (goBG!=null) { goBG.SetActive(false); }
+        if (goBG != null) { goBG.SetActive(false); }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.name.Contains("Coin") && !other.gameObject.name.Contains("RoC"))
         {
-            if (goBG != null) { goBG.SetActive(true); stageBGM.Pause();}
+            if (goBG != null) { goBG.SetActive(true); stageBGM.Pause(); }
         }
     }
-     void Update()
+    void Update()
     {
         if (GameManager.instance.gState != GameManager.GameState.Play)
-        { return; }
+        { 
+            return; 
+        }
 
         if (mCunt == 0)
         {

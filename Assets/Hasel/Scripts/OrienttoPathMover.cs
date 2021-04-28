@@ -5,45 +5,20 @@ using UnityEngine;
 public class OrienttoPathMover : MonoBehaviour
 {
     [SerializeField]
-    public Transform[] path1;
-    public Transform[] path2;
-    float dealyT = 1.5f;
+    Transform[] path;
 
     private void Start()
     {
-        Move1();
+        Move();
     }
 
     void OnDrawGizmos()
     {
-        iTween.DrawPath(path1);
-        iTween.DrawPath(path2);
+        iTween.DrawPath(path);
     }
 
-    void Move1()
+    void Move()
     {
-        iTween.MoveTo(gameObject, iTween.Hash(
-            "path", path1, 
-            "time", 5, 
-            "delay", dealyT,
-            "orienttopath", true, 
-            "looktime", .6, 
-            "easetype", iTween.EaseType.easeInOutSine,
-            "oncomplete", "Move2"
-            //,"looptype", iTween.LoopType.loop
-            ));
+        iTween.MoveTo(gameObject, iTween.Hash("path", path, "time", 10, "orienttopath", true, "looktime", .6, "easetype", iTween.EaseType.easeInOutSine));
     }
-    void Move2()
-    {
-        iTween.MoveTo(gameObject, iTween.Hash(
-            "path", path2,
-            "time", 3,
-            //"delay", dealyT,
-            "orienttopath", true,
-            "looktime", .6,
-            "easetype", iTween.EaseType.easeInOutSine,
-            "oncomplete", "Move1"
-            ));
-    }
-
 }
