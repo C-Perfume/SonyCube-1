@@ -9,6 +9,8 @@ public class DZFire : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        if (GameManager.instance.gState != GameManager.GameState.Play)
+        { return; }
         GameObject dZ = Instantiate(dangerZF);
         dZ.transform.position = new Vector3(transform.position.x, dZonePosition, transform.position.z);
     }

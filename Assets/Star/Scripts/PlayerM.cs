@@ -22,7 +22,6 @@ public class PlayerM : MonoBehaviour
         int selectedModel = GameMan.instance.selectedPlayer;
         playerModels[selectedModel].SetActive(true);
 
-        goBG = GameObject.Find("Canvas/GameOverBG");
         stageBGM = GameObject.Find("StageBG").GetComponent<AudioSource>();
         if (goBG != null) { goBG.SetActive(false); }
     }
