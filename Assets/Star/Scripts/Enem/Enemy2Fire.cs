@@ -9,13 +9,14 @@ public class Enemy2Fire : MonoBehaviour
     public GameObject laserF;
         int laserCnt=0;
     bool laserA = true;
-    
+    float spawnSpd = 0;
     public GameObject dangerZF;
-    public float dZonePosition = -0.3f; 
+    public float dZonePosition = -0.3f;
     // Start is called before the first frame update
-    void Start()
-    {
-              GameObject dZ = Instantiate(dangerZF); 
+ 
+    void OnEnable()
+    { 
+                GameObject dZ = Instantiate(dangerZF); 
                 dZ.transform.position = new Vector3(transform.position.x, dZonePosition, transform.position.z);
     }
 
@@ -36,5 +37,12 @@ public class Enemy2Fire : MonoBehaviour
                 { laserA = false; }
             }
         }
+    }
+
+    private void OnDisable()
+    {
+        laserCnt = 0;
+        laserA = true;
+        realTime = 0;
     }
 }

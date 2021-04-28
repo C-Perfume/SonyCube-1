@@ -1428,6 +1428,8 @@ MonoBehaviour:
   playerTalk: {fileID: 3017211697943939265}
   beeShowup: 24
   playerShup: 3
+  bgmStop: 22
+  VolumeDown: 1
 --- !u!114 &968163351
 MonoBehaviour:
   m_ObjectHideFlags: 0

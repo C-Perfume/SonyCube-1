@@ -746,6 +746,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1515407551, guid: be3cd1c5d0f203c44a80e1327904b1d7, type: 3}
+      propertyPath: poolSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515407551, guid: be3cd1c5d0f203c44a80e1327904b1d7, type: 3}
       propertyPath: ranTimeMax
       value: 20
       objectReference: {fileID: 0}
@@ -3985,7 +3989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763908567107060605, guid: eae0aca6c0ff2594a865c3d1e519cf8f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 623513619, guid: eae0aca6c0ff2594a865c3d1e519cf8f, type: 3}
@@ -4075,7 +4079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763908567107060605, guid: 5a588f78e7a756342b364e6525a15d69, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 623513619, guid: 5a588f78e7a756342b364e6525a15d69, type: 3}
@@ -4123,7 +4127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8456495253627933476, guid: 37f359fb6c8904541b089f7051a78447, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8456495253627933499, guid: 37f359fb6c8904541b089f7051a78447, type: 3}
       propertyPath: m_RootOrder
