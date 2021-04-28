@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  destroyT: 5
+  destroyT: 10
   stayT: 2
   rand: 0
 --- !u!54 &-8598324436110422993
