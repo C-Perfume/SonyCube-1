@@ -618,8 +618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinFactoryX: {fileID: 3650207289856649155, guid: 57c34d25cbc3d9146a794c9f838d98f1, type: 3}
   coinFactoryZ: {fileID: 3650207289856649155, guid: 57c34d25cbc3d9146a794c9f838d98f1, type: 3}
-  ranTimeMin: 5
-  ranTimeMax: 10
+  ranTimeMin: 30
+  ranTimeMax: 40
   ranCnt: 9
   childLength: 72
 --- !u!1 &495813915
@@ -742,6 +742,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1515407551, guid: be3cd1c5d0f203c44a80e1327904b1d7, type: 3}
+      propertyPath: ranTimeMax
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6174308264933023093, guid: be3cd1c5d0f203c44a80e1327904b1d7, type: 3}
       propertyPath: m_Name
       value: E2 Spawner
@@ -2017,8 +2021,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyFactory: {fileID: 5859082647953661045, guid: ca034a98f8ee5884a9db269804957fe1, type: 3}
-  ranTimeMin: 10
-  ranTimeMax: 10
+  ranTimeMin: 30
+  ranTimeMax: 40
   childLength: 72
   enemyFool: []
   activenemy: []
@@ -2147,8 +2151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinFactoryX: {fileID: 3650207289856649155, guid: 360d0b2bca89d914189276c1b32ce330, type: 3}
   coinFactoryZ: {fileID: 3650207289856649155, guid: b8b33a22d2675ce47aebcfd08eac4a5f, type: 3}
-  ranTimeMin: 5
-  ranTimeMax: 10
+  ranTimeMin: 13
+  ranTimeMax: 20
   ranCnt: 9
   childLength: 18
 --- !u!1 &1769769699

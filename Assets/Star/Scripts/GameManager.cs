@@ -19,12 +19,12 @@ public class GameManager : MonoBehaviour
     }
     public enum GameState
     {
-        Tutorial,
+        //Tutorial,
         Ready,
-        ReadyToGo,
-        Play,
-        GameOver,
-        Clear
+        //ReadyToGo,
+        Play
+        //GameOver,
+        //Clear
     }
 
     public GameState gState;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
    // public AudioClip tutorialBGM;
     private void Start()
     {
-        gState = GameState.Ready;//Tutorial; 
+        gState = GameState.Ready; Ready(); 
         pM = GameObject.Find("PlayersEmpty").GetComponent<PlayerM>();
         stageBGM = GameObject.Find("StageBG").GetComponent<AudioSource>();
         //tutoBGM = gameObject.GetComponent<AudioSource>();
@@ -45,39 +45,37 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (pM.goBG != null && pM.goBG.activeSelf) { gState = GameState.GameOver; }
-
-        switch(gState)
-        {
-            case GameState.Tutorial:
-                Tutorial();
-                break;
-            case GameState.Ready:
-                Ready();
-                break;
-            case GameState.ReadyToGo:
-                StartCoroutine(ReadyToGo());
-                 break;
-            case GameState.Play:
-                Play();
-                break;
+               //switch(gState)
+        //{
+        //    case GameState.Tutorial:
+        //        Tutorial();
+        //        break;
+        //    case GameState.Ready:
+                
+        //        break;
+        //    case GameState.ReadyToGo:
+                
+        //         break;
+        //    case GameState.Play:
+        //        Play();
+        //        break;
            
-            case GameState.GameOver:
-                break;
-            case GameState.Clear:
-                break;
-        }
+        //    case GameState.GameOver:
+        //        break;
+        //    case GameState.Clear:
+        //        break;
+        //}
     }
 
-    void Tutorial()
-    {// tutoBGM.Play(); gState = GameState.Ready;
-     }
+    //void Tutorial()
+    //{// tutoBGM.Play(); gState = GameState.Ready;
+    // }
 
     public void Ready()
     {
         go.SetActive(false);
         gameOptionBG.SetActive(false);
-        gState = GameState.ReadyToGo;
+        StartCoroutine(ReadyToGo());
     }
     IEnumerator ReadyToGo()
     {
@@ -87,13 +85,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         go.SetActive(false);
         gState = GameState.Play;
+        stageBGM.Play();
+
     }
-    void Play()
-    { stageBGM.Play();
-     StopAllCoroutines();
-     }
-    
-    
+    //void Play()
+    //{
+
+    //}
+        
     public void PauseOption()
     {
         gameOptionBG.SetActive(true);
@@ -112,6 +111,7 @@ public class GameManager : MonoBehaviour
     }
     public void RetryOption()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void EndOption()
