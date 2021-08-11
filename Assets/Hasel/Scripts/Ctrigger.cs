@@ -14,8 +14,6 @@ public class Ctrigger : MonoBehaviour
     }
     void Update()
     {
-        if (die)
-        { CoinDestroy.dieCoin = true; }
     }
     private void OnTriggerEnter(Collider other)
     {

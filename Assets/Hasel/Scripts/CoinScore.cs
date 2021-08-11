@@ -12,6 +12,7 @@ public class CoinScore : MonoBehaviour
     int bestCoin;
     //베스트 점수 UI(TEXT)
     public Text BestCoinUI;
+    public Text CurrCoinUI;
 
     //Start보다 Awake가 먼저 호출됨
 
@@ -36,6 +37,6 @@ public class CoinScore : MonoBehaviour
     void SetBestCoin(int BC)
     {
         bestCoin = BC; //현재 코인량 갱신        
-        BestCoinUI.text = "Coin : " + BC; //코인 UI 갱신
+        BestCoinUI.text = BC.ToString(); //코인 UI 갱신
     }
 }
